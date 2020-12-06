@@ -1,0 +1,374 @@
+input.form-control {
+  line-height: 1 !important;
+}
+.forms {
+  padding: 30px 0;
+  min-height: calc(100vh - 165px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: $largeDesktop) {
+    padding: 16px 0 22px;
+  }
+  @media (max-width: $desktop) {
+    padding: 60px 0;
+  }
+  .container {
+    @media (min-width: $desktop) and (max-width: 1200px) {
+      max-width: 95%;
+    }
+  }
+  .success-form {
+    .main-form {
+      @media (min-width: $largeDesktop) {
+        padding-bottom: 70px;
+      }
+    }
+  }
+  .forgot-screen,
+  .chPass-screen {
+    .main-form {
+      @media (min-width: $largeDesktop) {
+        padding-bottom: 70px;
+      }
+    }
+  }
+}
+.social-login {
+  .diff-text {
+    font: {
+      size: 12px;
+      weight: 400;
+    }
+    text-align: center;
+    margin: 20px 0 26px;
+    text-transform: uppercase;
+    color: rgb(166, 168, 172);
+    @media (max-width: $largeDesktop) {
+      margin: 16px 0;
+    }
+  }
+  .btnHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $largeDesktop) {
+      transform: scale(0.8);
+    }
+  }
+  .btn-item {
+    padding: 0 10px;
+    .btn-microsoft-login {
+      width: 43px;
+      height: 30px;
+      background: #f7f9fc;
+      transition: 0.2s;
+      border-radius: 5px !important;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    .google-icon {
+      background: #f7f9fc !important;
+      box-shadow: none !important;
+      width: 45px;
+      height: 41px;
+      justify-content: center;
+      border-radius: 5px !important;
+      margin-top: 3px;
+      div {
+        background-color: transparent !important;
+        margin-right: 0 !important;
+        padding: 0 !important;
+        svg {
+          transform: scale(1.2);
+        }
+      }
+      span {
+        padding: 0 !important;
+      }
+    }
+
+    .btn-microsoft-login {
+      font-size: 0;
+      border: 0;
+      background: {
+        image: url(../images/icons/outlook.png);
+        repeat: no-repeat;
+        position: center;
+        size: 20px 20px;
+      }
+    }
+  }
+}
+.from-screen {
+  display: flex;
+  flex-wrap: wrap;
+  .img {
+    align-self: center;
+    flex: 0 0 calc(100% - 407px);
+    max-width: calc(100% - 407px);
+    padding-right: 10%;
+    text-align: center;
+    @media (max-width: $desktop) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+      padding: {
+        left: 15px;
+        right: 15px;
+      }
+    }
+    img {
+      max-width: 648px;
+      width: 100%;
+      @media (max-width: $largeDesktop) {
+        max-width: 450px;
+      }
+      @media (max-width: $desktop) {
+        padding-bottom: 60px;
+      }
+    }
+  }
+}
+.main-form {
+  flex: 0 0 407px;
+  max-width: 407px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 22.08px 1.92px rgba(black, 0.08);
+  padding: 37px;
+  @media (max-width: $largeDesktop) {
+    padding: 32px 28px;
+  }
+  @media (max-width: $desktop) {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+  @media (max-width: $phone) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 30px 16px;
+  }
+  &.register {
+    @media (min-width: $desktop) and (max-width: $largeDesktop) and (max-height: 700px) {
+      margin-top: -84px;
+    }
+  }
+  a {
+    font-weight: bold;
+  }
+  .success-icon {
+    margin: 44px 0 32px;
+    @media (max-width: $largeDesktop) {
+      margin: 28px 0;
+    }
+  }
+  .forgot-icon {
+    margin: {
+      top: 32px;
+      bottom: 12px;
+    }
+    @media (max-width: $largeDesktop) {
+      margin-top: 24px;
+    }
+  }
+  .changePassIcon {
+    margin: {
+      top: 40px;
+      bottom: 52px;
+    }
+    @media (max-width: $largeDesktop) {
+      margin-top: 30px;
+      margin-bottom: 39px;
+    }
+    @media (max-width: $tablet) {
+      margin-top: 25px;
+      margin-bottom: 33px;
+    }
+  }
+  .input-wrap {
+    margin-top: 40px;
+    margin-bottom: 44px;
+    @media (max-width: $largeDesktop) {
+      margin: 22px 0;
+    }
+    @media (max-width: $phone) {
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+    @media (min-width: $phone) and (max-width: $tablet) {
+      margin-top: 25px;
+      margin-bottom: 40px;
+    }
+  }
+  .f-pass-wrap {
+    @media (max-width: $largeDesktop) {
+      line-height: 0;
+    }
+  }
+  .forgot-wrap {
+    margin-bottom: 34px;
+  }
+  .content {
+    color: #37466a;
+    text-align: center;
+    padding: 0 35px;
+    font: {
+      size: 14px;
+    }
+    line-height: 25px;
+    @media (max-width: $largeDesktop) {
+      font-size: 11px;
+    }
+    @media (max-width: $phone) {
+      padding: 0;
+    }
+  }
+  .success-content {
+    color: #37466a;
+    text-align: center;
+    padding: 0 25px;
+    font: {
+      size: 14px;
+    }
+    line-height: 25px;
+    @media (max-width: $largeDesktop) {
+      font-size: 12px;
+    }
+    @media (max-width: $phone) {
+      padding: 0;
+    }
+  }
+  .forgot {
+    color: #37466a;
+    font-size: 13px;
+    @media (max-width: $largeDesktop) {
+      font-size: 10px;
+    }
+  }
+  .title,
+  label {
+    color: #37466a;
+  }
+  .title {
+    font: {
+      size: 22px;
+      weight: 800;
+    }
+    line-height: 39.9px;
+    @media (max-width: $largeDesktop) {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+  }
+  label {
+    font: {
+      size: 13px;
+      weight: bold;
+    }
+    line-height: 9.9px;
+    margin-bottom: 17px;
+    @media (max-width: $largeDesktop) {
+      font-size: 10px;
+      margin-bottom: 8px;
+    }
+  }
+  .form-control {
+    border: {
+      color: #7e8189;
+    }
+    color: #7e8189;
+    height: 45px;
+    padding: 0 18px;
+    font: {
+      size: 15px;
+      weight: 400;
+    }
+    @media (max-width: $largeDesktop) {
+      height: 32px;
+      font: {
+        size: 12px;
+        weight: 500;
+      }
+      padding: 0 12px;
+    }
+    @media (max-width: $phone) {
+      height: 50px;
+    }
+  }
+  .bottom-text {
+    text-align: center;
+    color: #37466a;
+    font: {
+      size: 14px;
+    }
+    line-height: 20px;
+    margin-top: 10px;
+    @media (max-width: $largeDesktop) {
+      font-size: 11px;
+    }
+    a {
+      color: #25bae9;
+      margin-left: 2px;
+    }
+    margin-bottom: 0;
+  }
+  .content-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 355px;
+    justify-content: space-between;
+    @media (max-width: $largeDesktop) {
+      min-height: 320px;
+    }
+  }
+  .inp-wrapper {
+    margin-bottom: 60px;
+    @media (max-width: $largeDesktop) {
+      margin-bottom: 40px;
+    }
+  }
+  .text-danger {
+    font-size: 14px;
+    @media (max-width: $largeDesktop) {
+      font-size: 11px;
+    }
+  }
+}
+.text-danger {
+  font-size: 14px;
+  @media (max-width: $largeDesktop) {
+    font-size: 11px;
+  }
+}
+
+::-webkit-input-placeholder {
+  font-size: 13px !important;
+  @media (max-width: $largeDesktop) {
+    font-size: 11px !important;
+  }
+}
+
+:-ms-input-placeholder {
+  font-size: 13px !important;
+  @media (max-width: $largeDesktop) {
+    font-size: 11px !important;
+  }
+}
+
+::placeholder {
+  font-size: 13px !important;
+  @media (max-width: $largeDesktop) {
+    font-size: 11px !important;
+  }
+}
+// .add-input{
+//   input{
+//     flex-grow: 1;
+//   }
+// }
+.form-group {
+  margin-bottom: 12px;
+}

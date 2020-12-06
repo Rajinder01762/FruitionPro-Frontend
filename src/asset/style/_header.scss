@@ -1,0 +1,1191 @@
+$sideBarWidth: 348px;
+$sidebarLargeDesktop: 240px;
+$sideBarDesktopWidth: 270px;
+
+.header-wrapper {
+  background-image: linear-gradient(to right, #2bbeed, #22e5e7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 110px;
+  @media (max-width: $largeDesktop) {
+    height: 85px;
+  }
+  .logo {
+    padding-left: 120px;
+    @media (max-width: $largeDesktop) {
+      padding-left: 66px;
+    }
+
+    @media (max-width: $desktop) {
+      display: none;
+    }
+  }
+
+  .search {
+    position: absolute;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    @media (min-width: $desktop) {
+      width: 44%;
+      left: 0;
+    }
+    @media (max-width: $desktop) {
+      padding-right: 220px;
+    }
+    @media (max-width: $phone) {
+      padding-right: 190px;
+    }
+    @media (max-width: $smallPhone) {
+      padding-right: 155px;
+    }
+    .srchBtn {
+      @media (max-width: $desktop) {
+        display: none;
+      }
+    }
+
+    &.active {
+      @media (max-width: $tablet) {
+        padding-right: 22px;
+      }
+
+      @media (max-width: $phone) {
+        padding-right: 16px;
+      }
+
+      .form-control {
+        @media (max-width: $desktop) {
+          height: 32px;
+          border-radius: 30px;
+          padding-left: 20px;
+          padding-right: 20px;
+
+          &:focus {
+            cursor: inherit;
+            width: 466px;
+            border: 1px solid #fff;
+            box-shadow: none;
+            background-image: none;
+
+            @media (max-width: $tablet) {
+              width: 266px;
+            }
+
+            @media (max-width: $phone) {
+              width: 200px;
+              height: 20px;
+            }
+
+            @media (max-width: $smallPhone) {
+              width: 150px;
+            }
+          }
+        }
+        &::-webkit-search-cancel-button {
+          color: red;
+        }
+      }
+
+      .search-icon {
+        @media (max-width: $desktop) {
+          display: none;
+        }
+      }
+    }
+    .btn {
+      font-size: 12px;
+      /* padding: 0 70px; */
+      width: 100px;
+      background-color: rgba(255, 255, 255, 0.15) !important;
+      border: 0;
+      color: #fff;
+      font-weight: 600;
+      @media (max-width: $largeDesktop) {
+        font-size: 10px;
+      }
+
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+    .srchBtn {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .filterBtn {
+      position: relative;
+      width: 45px;
+      font-size: 18px;
+      // border-top-left-radius: 0;
+      // border-bottom-left-radius: 0;
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+      }
+      @media (max-width: $phone) {
+        height: 20px;
+        padding: 0;
+      }
+
+      @media (max-width: $smallPhone) {
+        width: 27px;
+        font-size: 10px;
+        height: 20px;
+      }
+    }
+
+    .clearbtn {
+      color: #29c5ec;
+      font-size: 14px;
+      margin-top: 10px;
+      /* text-align: right; */
+      font-weight: 600;
+      background: none;
+      box-shadow: none;
+      border: 0;
+      padding: 0;
+      @media (max-width: $largeDesktop) {
+        font-size: 11px;
+      }
+    }
+    .closeBtn {
+      position: absolute;
+      right: 12px;
+      top: 7px;
+      cursor: pointer;
+      z-index: 40;
+      p {
+        cursor: pointer;
+      }
+      .fa-times {
+        cursor: pointer;
+      }
+      @media (max-width: $largeDesktop) {
+        font-size: 11px;
+      }
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 13px;
+      left: 20px;
+      @media (min-width: $phone) and (max-width: $desktop) {
+        left: auto;
+        top: 9px;
+      }
+
+      @media (max-width: $phone) {
+        right: 20px;
+        left: auto;
+        top: 9px;
+      }
+      @media (max-width: $smallPhone) {
+        right: initial;
+      }
+    }
+
+    .form-control {
+      border-top-left-radius: 6.9px;
+      border-bottom-left-radius: 6.9px;
+      position: relative;
+      height: 42px;
+      border: 0;
+      color: #fff;
+      padding-left: 47px;
+      background-color: rgba(#fff, 0.15);
+      background-image: url("../images/dashboard-icons/search.svg");
+      background-repeat: no-repeat;
+      background-position: 16px center;
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+      }
+      @media (max-width: $desktop) {
+        width: 15px;
+        height: 32px;
+        transition: 0.5s all;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0);
+      }
+      @media (max-width: $phone) {
+        padding-left: 25px;
+        background-size: 15px;
+        height: 20px;
+      }
+      @media (max-width: $smallPhone) {
+        background-size: 12px;
+      }
+
+      &::-webkit-input-placeholder {
+        color: inherit;
+      }
+
+      &::-moz-placeholder {
+        color: inherit;
+      }
+
+      &:-ms-input-placeholder {
+        color: inherit;
+      }
+
+      &:-moz-placeholder {
+        color: inherit;
+      }
+    }
+    .search-dropdown {
+      display: none;
+      &.visible {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        padding: 20px;
+        background: #fcfdff;
+        width: 140px;
+        box-shadow: -2px 8px 13px 2px #cccccc38;
+        border-radius: 5px;
+        margin-top: 3px;
+        @media (max-width: $desktop) {
+          right: 220px;
+        }
+        @media (max-width: $phone) {
+          right: 190px;
+        }
+        @media (max-width: $smallPhone) {
+          right: 155px;
+        }
+        label {
+          font-size: 14px;
+          font-weight: 500;
+          @media (max-width: $largeDesktop) {
+            font-size: 11px;
+          }
+        }
+        .form-check {
+          margin-bottom: 5px;
+        }
+        .form-check-input {
+          margin-left: -1.7rem;
+        }
+      }
+    }
+    .srchInput {
+      position: relative;
+      width: 100%;
+    }
+    .srchCross {
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      @media (max-width: $desktop) {
+        display: none;
+      }
+    }
+  }
+
+  .add-icon {
+    position: absolute;
+    left: 85px;
+    top: 25px;
+    @media (max-width: $phone) {
+      left: 60px;
+    }
+
+    button {
+      &:active,
+      &:hover,
+      &:focus {
+        box-shadow: none !important;
+        background: none !important;
+        cursor: pointer !important;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
+
+    @media (max-width: $smallPhone) {
+      left: 45px;
+    }
+
+    button {
+      background: transparent;
+      border: none;
+    }
+    svg {
+      @media (max-width: $phone) {
+        width: 15px;
+      }
+      @media (max-width: $smallPhone) {
+        width: 12px;
+      }
+    }
+  }
+
+  .notes-icon {
+    position: absolute;
+    left: 85px;
+    top: 25px;
+    padding-left: 100px;
+    @media (max-width: $phone) {
+      left: 60px;
+    }
+
+    button {
+      &:active,
+      &:hover,
+      &:focus {
+        box-shadow: none !important;
+        background: none !important;
+        cursor: pointer !important;
+      }
+    }
+
+    button {
+      background: transparent;
+      border: none;
+    }
+    svg {
+      @media (max-width: $smallPhone) {
+        width: 12px;
+      }
+    }
+  }
+
+  .user-img {
+    padding-right: 120px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $largeDesktop) {
+      padding-right: 66px;
+    }
+
+    @media (max-width: $desktop) {
+      padding-right: 30px;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 30px;
+    }
+    .header-notification {
+      .bell-btn {
+        background: transparent !important;
+        border: 0 !important;
+        padding: 0;
+        box-shadow: none !important;
+        font-size: 32px;
+        margin-right: 30px;
+        @media (max-width: $largeDesktop) {
+          font-size: 25px;
+        }
+        @media (max-width: $phone) {
+          font-size: 18px;
+        }
+        @media (max-width: $smallPhone) {
+          font-size: 14px;
+          margin-right: 20px;
+        }
+        .bell-icon {
+          position: relative;
+          .count {
+            position: absolute;
+            background: red;
+            font-size: 10px;
+            min-width: 15px;
+            display: block;
+            border-radius: 100%;
+            line-height: 1;
+            padding: 2px;
+            left: 100%;
+            margin-left: -7px;
+          }
+        }
+      }
+      .dropdown-menu {
+        position: fixed !important;
+        transform: initial !important;
+        top: 80px !important;
+        right: 30px !important;
+        left: initial !important;
+        outline: none;
+        z-index: 1000;
+        background: #fff;
+        width: 335px;
+        max-width: calc(100vw - 75px);
+        box-shadow: 0 0 6px 0px #ccc;
+        border: 0;
+        border-radius: 15px;
+        padding: 10px;
+        @media (max-width: $largeDesktop) {
+          top: 60px !important;
+        }
+      }
+    }
+
+    .user-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+      margin-bottom: 8px;
+      background: #fff;
+      border-radius: 100%;
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-transform: uppercase;
+        @media (max-width: $largeDesktop) {
+          font-size: 12px;
+        }
+      }
+
+      @media (max-width: $largeDesktop) {
+        width: 40px;
+        height: 40px;
+      }
+      @media (max-width: $phone) {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+      }
+      @media (max-width: $smallPhone) {
+        width: 20px;
+        height: 20px;
+        font-size: 9px;
+      }
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        margin-bottom: 10px;
+        object-fit: contain;
+        background-color: #fff;
+        @media (max-width: $largeDesktop) {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    &.hide {
+      @media (max-width: $tablet) {
+        opacity: 0;
+      }
+    }
+    .user-dropdown {
+      font-size: 14px;
+      font-weight: 500;
+      position: absolute;
+      top: 100%;
+      background: transparent;
+      width: 140px;
+      display: none;
+      cursor: pointer;
+      right: 0;
+      padding-top: 12px;
+      @media (max-width: $largeDesktop) {
+        font-size: 11px;
+      }
+      .user-logout {
+        background: #fff;
+        box-shadow: -2px 8px 13px 2px #cccccc38;
+        padding: 10px;
+      }
+
+      svg {
+        transform: rotate(89deg) !important;
+        width: 15px;
+        margin-right: 7px;
+        margin-top: -3px;
+      }
+    }
+  }
+  .username-wrapper {
+    position: relative;
+    &:hover {
+      .user-dropdown {
+        display: block !important;
+      }
+    }
+  }
+
+  .user-name {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 10px;
+    margin-bottom: 0;
+    @media (max-width: $largeDesktop) {
+      font-size: 13px;
+    }
+    @media (max-width: $phone) {
+      font-size: 11px;
+    }
+    @media (max-width: $smallPhone) {
+      font-size: 9px;
+    }
+  }
+
+  .mobile-menuIcon {
+    background: transparent;
+    height: 42px;
+    border: none;
+    margin-left: 30px;
+    @media (min-width: $desktop) {
+      display: none;
+    }
+    @media (max-width: $phone) {
+      margin-left: 16px;
+    }
+    img {
+      @media (max-width: $phone) {
+        width: 20px;
+      }
+    }
+  }
+}
+
+.meeting-btn {
+  background: #fff !important;
+  color: rgb(43, 44, 47) !important;
+  font-size: 15.9px;
+  box-shadow: 0px 0px 6px 3px rgba(58, 58, 58, 0.11);
+  border: none;
+  border-radius: 30.6px;
+  width: 290px;
+  height: 60.9px;
+  position: relative;
+  margin-left: 25px;
+  &:focus {
+    box-shadow: 0px 0px 6px 3px rgba(58, 58, 58, 0.11);
+  }
+
+  @media (min-width: $desktop) and (max-width: 1199px) {
+    margin-left: 10px;
+    width: 225px;
+    height: 50px;
+    font-size: 13px;
+  }
+  @media (max-width: $largeDesktop) {
+    margin-left: 20px;
+    width: 185px;
+    height: 42px;
+    font-size: 11px;
+  }
+}
+
+.sidebar-wrapper {
+  position: fixed;
+  width: $sideBarWidth;
+  top: 110px;
+  // padding-top: 75px;
+  // overflow: auto;
+  height: calc(100vh - 100px);
+  @media (max-width: $largeDesktop) {
+    width: $sidebarLargeDesktop;
+    // padding-top: 48px;
+    top: 85px;
+    height: calc(100% - 85px);
+  }
+  @media (max-width: $desktop) {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+    top: 0;
+  }
+  .meetingbtn-wrapper {
+    padding-top: 56px;
+    padding-bottom: 15px;
+    @media (max-width: $desktop) {
+      display: none;
+    }
+  }
+
+  .sidebar-content {
+    height: 100%;
+    @media (max-width: $desktop) {
+      transition: 0.3s;
+      background: #fff;
+      position: absolute;
+      transform: translateX(-$sideBarWidth);
+      height: 100%;
+      top: 0;
+      overflow: auto;
+    }
+
+    .meeting-btn {
+      @media (max-width: $desktop) {
+        display: none;
+      }
+    }
+    .menu-list {
+      height: calc(100% - 300px);
+      overflow: auto;
+      @media (max-width: $largeDesktop) {
+        height: calc(100% - 200px);
+        overflow: auto;
+      }
+    }
+
+    .mobile-logo {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      right: 0;
+      text-align: center;
+
+      @media (min-width: $desktop) {
+        display: none;
+      }
+    }
+  }
+
+  &.closing {
+    @media (max-width: $desktop) {
+      opacity: 0;
+      animation: closing-frame 0.2s;
+
+      .sidebar-content {
+        transform: translateX(-$sideBarWidth);
+      }
+    }
+  }
+
+  &.opening {
+    @media (max-width: $desktop) {
+      opacity: 1;
+      z-index: 999999;
+      padding: 0;
+
+      .sidebar-content {
+        transform: translateX(0);
+      }
+      &.active {
+        .sidebar-content {
+          display: none;
+        }
+      }
+      .private-btn {
+        display: none;
+      }
+    }
+  }
+
+  @keyframes closing-frame {
+    0%,
+    99% {
+      opacity: 1;
+      z-index: 999999;
+    }
+
+    100% {
+      opacity: 0;
+      z-index: -999;
+    }
+  }
+
+  .backdrop {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    opacity: 0.4;
+    top: 0;
+    bottom: 0;
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+  .sidebar-logo {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  .dashboard-menu {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    list-style: none;
+    padding-left: 0;
+    font-size: 15px;
+    padding-right: 42.9px;
+    @media (max-width: $largeDesktop) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    @media (max-width: $largeDesktop) {
+      padding-right: 30px;
+    }
+
+    li {
+      padding: 10px 0;
+      padding-left: 89.9px;
+      border-top-right-radius: 30.6px;
+      border-bottom-right-radius: 30.6px;
+      margin-bottom: 5px;
+      // @media (min-width: $desktop) and (max-width: 1200px) {
+      //   padding-left: 46.9px;
+      // }
+      @media (max-width: $largeDesktop) {
+        padding-left: 35px;
+        font-size: 11px;
+      }
+
+      @media (max-width: $desktop) {
+        padding-left: 40px;
+        padding-right: 20px;
+      }
+
+      &.active {
+        background: #c2f5f8;
+
+        a {
+          color: #109cc8;
+        }
+
+        svg {
+          fill: #109cc8;
+        }
+      }
+
+      &:hover {
+        background-color: #c2f5f8;
+
+        a {
+          color: #109cc8;
+        }
+
+        svg {
+          fill: #109cc8;
+        }
+      }
+
+      span {
+        padding-left: 23px;
+      }
+    }
+
+    a {
+      color: #2b2c2f;
+      display: block;
+      text-decoration: none;
+    }
+
+    svg {
+      fill: rgb(118, 118, 118);
+    }
+  }
+  .logout-btn {
+    height: 200px;
+    padding-left: 89.9px;
+    padding-top: 15px;
+    @media (max-width: $largeDesktop) {
+      height: 100px;
+      padding-left: 35px;
+    }
+    button {
+      font-size: 16px;
+      background: transparent;
+      border: none;
+      padding: 0;
+      font-weight: bold;
+      color: rgba(43, 44, 47, 0.8);
+      display: flex;
+      justify-content: space-between;
+      width: 82px;
+      align-items: center;
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+      }
+      &:hover {
+        color: #109cc8;
+        svg {
+          fill: #109cc8;
+        }
+      }
+      svg {
+        transform: rotate(89deg) !important;
+        width: 18px;
+        fill: #615f5f;
+      }
+    }
+  }
+}
+
+.meetings-modal {
+  margin: 200px 60px 0;
+  max-width: 463px;
+
+  @media (max-width: $largeDesktop) {
+    max-width: 400px;
+  }
+  @media (max-width: $phone) {
+    margin: 200px 10px;
+  }
+
+  .modal-body {
+    padding: 0;
+  }
+
+  &.contact-modal {
+    margin: 200px auto;
+
+    .meetings-content {
+      // padding: 0;
+    }
+  }
+
+  .meetings-content {
+    cursor: pointer;
+    padding: 17px 33px;
+
+    &:not(:first-child) {
+      padding: 0;
+    }
+
+    button {
+      width: 100%;
+      border: 0;
+      box-shadow: none !important;
+      padding: 8px 26px !important;
+
+      &.google-icon {
+        background-color: rgba(#dfeffd, 0.2) !important;
+
+        &:after {
+          content: "Import/Sync from Google";
+          margin-left: -14px;
+          font-weight: 300;
+          font-size: 16px;
+          -webkit-font-smoothing: antialiased;
+          color: #000;
+          @media (max-width: $largeDesktop) {
+            font-size: 12px;
+            margin-left: -16px;
+          }
+        }
+      }
+
+      div {
+        background: none !important;
+        @media (max-width: $largeDesktop) {
+          padding: 8px !important;
+        }
+        @media (max-width: $phone) {
+          margin-right: 6px !important;
+        }
+
+        svg {
+          transform: scale(1.4);
+          @media (max-width: $largeDesktop) {
+            transform: scale(1);
+          }
+        }
+
+        span {
+          padding: 0 !important;
+        }
+      }
+
+      &.btn-microsoft-login {
+        padding: 18px 82px !important;
+        text-align: left;
+        background-color: transparent !important;
+        position: relative;
+        font-size: 16px;
+        @media (max-width: $largeDesktop) {
+          font-size: 12px;
+          padding: 18px 67px !important;
+        }
+
+        &:before {
+          content: "";
+          background-image: url("../images/dashboard-icons/Office365.png") !important;
+          background-size: 13px;
+          background-repeat: no-repeat;
+          width: 30px;
+          height: 30px;
+          transform: scale(1.5);
+          position: absolute;
+          left: 43px;
+          -webkit-font-smoothing: antialiased;
+          top: 27px;
+          @media (max-width: $largeDesktop) {
+            background-size: 10px;
+            width: 15px;
+            height: 15px;
+            top: 22px;
+            left: 40px;
+          }
+        }
+      }
+
+      span {
+        padding: 0 !important;
+      }
+    }
+
+    img {
+      width: 27px;
+      @media (max-width: $largeDesktop) {
+        width: 22px;
+      }
+    }
+
+    span {
+      font-size: 16px;
+      margin-left: 22px;
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+        margin-left: 13px;
+      }
+      &.number {
+        font-family: "Roboto";
+        font-weight: 300;
+        margin-left: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: rgba(#dfeffd, 0.2);
+    }
+  }
+}
+
+.meeting-btn::before {
+  content: "";
+  background-image: url("../images/dashboard-icons/add-plus-button.svg");
+  background-position: bottom;
+  position: absolute;
+  background-position: bottom;
+  height: 23px;
+  width: 23px;
+  background-repeat: no-repeat;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-size: cover;
+  color: #109cc8;
+  @media (max-width: $largeDesktop) {
+    left: 15px;
+    width: 11px;
+    height: 11px;
+  }
+}
+.private-btn {
+  background: #fff !important;
+  color: #2b2c2f !important;
+  font-size: 15.9px;
+  box-shadow: 0px 0px 6px 3px rgba(58, 58, 58, 0.11);
+  border: none;
+  width: 260px;
+  height: 55px;
+  position: relative;
+  margin-left: 32px;
+  font-weight: 600;
+  @media (max-width: $largeDesktop) {
+    width: 185px;
+    height: 42px;
+    font-size: 11px;
+    margin-left: 20px;
+  }
+  &:before {
+    content: "";
+    background-image: url("../images/dashboard-icons/notes.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 23px;
+    width: 23px;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: cover;
+    color: #109cc8;
+    @media (max-width: $largeDesktop) {
+      left: 35px;
+      width: 11px;
+      height: 11px;
+    }
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: 0px 0px 6px 3px rgba(58, 58, 58, 0.11);
+  }
+}
+.private-note {
+  position: fixed;
+  width: 0;
+  overflow: hidden;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+  top: 0;
+  height: 100%;
+  margin-top: 116px;
+  z-index: 2;
+  @media (max-width: $largeDesktop) {
+    margin-top: 82px;
+  }
+  .note-title {
+    border-bottom: 1px solid #37466a;
+    display: flex;
+
+    h2 {
+      margin: 0px;
+      color: #37466a;
+      font-size: 20px;
+      line-height: 40px;
+      font-weight: 600;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      padding-left: 10px;
+      white-space: nowrap;
+      text-align: left;
+
+      @media (max-width: $largeDesktop) {
+        font-size: 15px;
+      }
+      @media (max-width: $phone) {
+        font-size: 14px;
+      }
+      span {
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+      }
+    }
+    .note-title-wrapper {
+      margin: 0px;
+      line-height: 40px;
+      right: 10px;
+      position: absolute;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      display: flex;
+
+      button {
+        background: none !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        color: #000;
+        padding: 10px 10px;
+        @media (max-width: $phone) {
+          font-size: 14px;
+        }
+      }
+
+      .pdf-shares-sidebar {
+        .dropdown-menu {
+          // left: -120px !important;
+          width: 300px;
+          margin: 0;
+          margin-bottom: 12px;
+          color: #000;
+          padding-bottom: 12px;
+          padding-top: 0;
+          z-index: 1;
+          right: 0px;
+          top: 100% !important;
+          left: initial !important;
+          transform: initial !important;
+          vertical-align: middle;
+
+          @media (max-width: $largeDesktop) {
+            width: 215px;
+          }
+          .dropdown-header {
+            background: #c2f5f8;
+            color: #000;
+            padding: 15px 20px;
+            font-size: 18px;
+            margin-bottom: 12px;
+
+            @media (max-width: $largeDesktop) {
+              padding: 13px 20px;
+              font-size: 14px;
+            }
+          }
+          button {
+            font-weight: 500;
+            width: 100%;
+            text-align: left;
+            color: #000 !important;
+            padding-left: 20px;
+            @media (max-width: $largeDesktop) {
+              font-size: 12px;
+            }
+
+            .fa,
+            .fas,
+            .far {
+              margin-right: 20px;
+              color: #109cc8;
+            }
+          }
+        }
+      }
+    }
+  }
+  .note-content {
+    margin: 10px 0;
+    textarea {
+      border: 0;
+      width: 247px;
+      padding: 0 10px;
+      width: 346px;
+
+      @media (max-width: $largeDesktop) {
+        width: 290px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &.visible {
+    // transition: all 1s;
+    width: 350px;
+    border-right: 2px solid #f1f0f1;
+    @media (max-width: $largeDesktop) {
+      width: 290px;
+    }
+    @media (max-width: $phone) {
+      width: 250px;
+    }
+  }
+}
+.noFound {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  @media (max-width: $largeDesktop) {
+    font-size: 15px;
+  }
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}

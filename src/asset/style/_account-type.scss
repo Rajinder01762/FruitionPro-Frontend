@@ -1,0 +1,282 @@
+.ac-forms {
+  &.org-detail-form {
+    .account-form-screen {
+      .img {
+        flex-basis: calc(100% - 503px);
+        max-width: calc(100% - 503px);
+        @media (max-width: $tablet) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  @media (max-width: $desktop) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+.account-heading {
+  background: #f1f8fe;
+  padding: 18px 35px;
+  @media (max-width: $largeDesktop) {
+    padding: 8px 30px;
+  }
+  h4 {
+    color: #37466a;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 36.6px;
+    margin: 0;
+    @media (max-width: $largeDesktop) {
+      font-size: 14px;
+    }
+  }
+}
+.account-form-screen {
+  display: flex;
+  flex-wrap: wrap;
+  .img {
+    align-self: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100% - 585px);
+    max-width: calc(100% - 585px);
+    padding-right: 10%;
+    @media (max-width: $desktop) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    img {
+      max-width: 608px;
+      width: 100%;
+      @media (max-width: $desktop) {
+        max-width: 450px;
+        width: 100%;
+        padding-bottom: 60px;
+      }
+    }
+  }
+  .account-type-content {
+    flex: 0 0 585px;
+    max-width: 585px;
+    min-height: 450px;
+    .account-type-content-wrapper {
+      padding: 0 20px;
+      @media (max-width: $largeDesktop) {
+        padding: 0 50px;
+      }
+      @media (max-width: $phone) {
+        padding: 0;
+      }
+    }
+    .logout-text {
+      font-size: 15px;
+      @media (max-width: $largeDesktop) {
+        font-size: 13px;
+      }
+      a {
+        font-weight: 600;
+        color: #25bae9;
+      }
+    }
+    &.organization-content {
+      flex: 0 0 503px;
+      max-width: 503px;
+      @media (max-width: $tablet) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      @media (min-width: $desktop) and (max-width: $largeDesktop) and (max-height: 700px) {
+        margin-top: -84px;
+      }
+    }
+    .nav-tabs {
+      justify-content: space-around;
+      margin-top: 41px;
+      margin-bottom: 17px;
+      border-bottom: 0;
+      margin-left: -20px;
+      margin-right: -20px;
+      .nav-item {
+        padding: 0 20px;
+        flex: 0 0 50%;
+        max-width: 50%;
+        @media (max-width: $phone) {
+          flex: 0 0 100%;
+          max-width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+
+      .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 71px;
+        border: 1px solid rgb(247, 245, 245);
+        border-radius: 2px;
+        text-transform: capitalize;
+        font-size: 13.5px;
+        color: #37466a;
+        font-weight: bold;
+        box-shadow: none;
+        @media (max-width: $largeDesktop) {
+          height: 48px;
+          font-size: 11px;
+        }
+        &.active {
+          box-shadow: 0px 0px 6px 3px rgba(40, 204, 235, 0.09);
+          .org-success {
+            display: block;
+          }
+        }
+        .org-success {
+          display: none;
+        }
+        .tab-icon {
+          position: absolute;
+          top: 50%;
+          left: 20px;
+          transform: translateY(-50%);
+          background: #f1f8fe;
+          padding: 5px;
+          border-radius: 100%;
+          &.ind {
+            width: 28px;
+            height: 28px;
+          }
+        }
+      }
+    }
+    .tab-content {
+      width: 92%;
+      margin: 0 auto;
+      margin-bottom: 57px;
+      @media (max-width: $phone) {
+        width: 100%;
+      }
+    }
+
+    .org-detail {
+      margin-bottom: 73px;
+      @media (max-width: $largeDesktop) {
+        margin-bottom: 30px;
+      }
+    }
+    .key-wrap {
+      position: relative;
+      img {
+        position: absolute;
+        top: 13px;
+        @media (max-width: $largeDesktop) {
+          top: 6px;
+        }
+        &.key {
+          left: 14px;
+        }
+        &.checked {
+          right: 17px;
+        }
+      }
+    }
+    .org-success {
+      position: absolute;
+      top: -5px;
+      right: -8px;
+      width: 15px;
+    }
+    .upload-icon {
+      margin-top: 45px;
+      margin-bottom: 22px;
+
+      @media (max-width: $largeDesktop) {
+        margin-top: 20px;
+        margin-bottom: 0;
+      }
+    }
+    @media (max-width: $tablet) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 30px 16px;
+    }
+    @media (max-width: $desktop) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  label {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 9.9px;
+    margin-bottom: 17px;
+    color: #37466a;
+    position: relative;
+    @media (max-width: $largeDesktop) {
+      font-size: 11px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .form-control {
+    border-color: #7e8189;
+    color: #7e8189;
+    height: 45px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 15px;
+    font-weight: 400;
+    @media (max-width: $largeDesktop) {
+      height: 32px;
+      font-size: 11px;
+    }
+    &.license-key {
+      padding-left: 50px;
+    }
+  }
+  .checked {
+    width: 20px;
+  }
+  .bottom-text {
+    font-size: 14px;
+    @media (max-width: $largeDesktop) {
+      font-size: 11px;
+    }
+    a {
+      color: rgb(37, 186, 233);
+      font-weight: bold;
+      margin-left: 2px;
+    }
+  }
+  .selectContent {
+    button {
+      img {
+        width: 20px;
+      }
+    }
+  }
+}
+.user-details-wrapper {
+  // .form-control {
+  //   height: 35px;
+  // }
+}
+
+label {
+  &.required {
+    &:after {
+      content: "*";
+      color: red;
+      font-size: x-large;
+      position: absolute;
+      @media (max-width: $largeDesktop) {
+        font-size: large;
+      }
+    }
+  }
+}

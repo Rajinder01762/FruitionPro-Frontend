@@ -1,0 +1,1260 @@
+.modal-open {
+  overflow: auto;
+}
+
+.modal-header {
+  background-image: linear-gradient(to right, #2bbeed, #22e5e7);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 20px;
+  @media (max-width: $largeDesktop) {
+    font-size: 13px;
+  }
+  .modal-title {
+    @media (max-width: $largeDesktop) {
+      font-size: 16px;
+    }
+  }
+
+  .close {
+    color: #fff;
+    font-size: 35px;
+    line-height: 0.7;
+    font-weight: normal;
+    opacity: 1;
+    &:hover,
+    &:active,
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+.modal-body {
+  &.isDisabled {
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: rgba(#fff, 0.7);
+    }
+  }
+}
+.user-details-wrapper {
+  max-width: 582px;
+
+  label {
+    font-size: 12.6px;
+  }
+
+  .form-control {
+    height: 35px;
+  }
+
+  .modal-content {
+    border: none;
+
+    .modal-body {
+      padding: 34px 44px 65px;
+    }
+  }
+
+  .request-btn {
+    margin-top: 24px;
+  }
+}
+.popup-select {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(88, 88, 88);
+  @media (max-width: $largeDesktop) {
+    font-size: 11px;
+  }
+
+  .css-yk16xz-control {
+    border: none;
+    font-size: 13px;
+    padding-left: 6px;
+    background: #f4f4f4;
+    min-width: 90px;
+    @media (max-width: $largeDesktop) {
+      font-size: 11px;
+    }
+  }
+
+  .css-1okebmr-indicatorSeparator {
+    background: none;
+  }
+}
+.css-1wa3eu0-placeholder {
+  font-weight: 500;
+}
+.licenseKeyModal {
+  margin-top: 400px;
+}
+
+.create-meeting-modal {
+  max-width: 717px;
+  @media (max-width: $largeDesktop) {
+    max-width: 655px;
+  }
+
+  &.add-agenda-screen {
+    max-width: 900px;
+    @media (max-width: $largeDesktop) {
+      max-width: 700px;
+    }
+    .modal-body {
+      .form-control {
+        height: 50px;
+        font-weight: 500;
+        color: rgb(76, 76, 76);
+        @media (max-width: $largeDesktop) {
+          height: 32px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .modal-header {
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding: 22px 30px;
+    @media (max-width: $largeDesktop) {
+      padding: 16px 18px;
+    }
+
+    span {
+      position: absolute;
+      right: 40px;
+      top: 16px;
+      @media (max-width: $largeDesktop) {
+        font-size: 27px;
+      }
+      @media (max-width: $phone) {
+        right: 20px;
+      }
+    }
+    .close {
+      position: absolute;
+      left: 60px;
+      cursor: pointer;
+      @media (max-width: $phone) {
+        left: 25px;
+      }
+    }
+    .modal-title {
+      font-size: 22px;
+      @media (max-width: $largeDesktop) {
+        font-size: 16px;
+      }
+
+      span {
+        font-size: 18px;
+        margin-top: 8px;
+        cursor: pointer;
+        @media (max-width: $largeDesktop) {
+          font-size: 13px;
+          margin-top: 5px;
+        }
+        @media (max-width: $tablet) {
+          margin-top: 0px;
+        }
+        @media (max-width: $phone) {
+          margin-top: -3px;
+        }
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 30px 38px;
+    @media (max-width: $largeDesktop) {
+      padding: 20px 30px;
+    }
+    .form-control {
+      height: 57px;
+      border-color: rgba(#7e8189, 0.3);
+      font-weight: 700;
+      @media (max-width: $largeDesktop) {
+        height: 32px;
+      }
+    }
+
+    .department-select {
+      background: #eee;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 5px;
+      @media (max-width: $largeDesktop) {
+        font-size: 11px;
+      }
+      .department__control {
+        background: #fff;
+        height: 57px;
+        background: transparent;
+        @media (max-width: $largeDesktop) {
+          height: 32px;
+          min-height: 32px;
+        }
+      }
+      .department__indicator-separator {
+        background-color: transparent;
+      }
+      .department__single-value {
+        color: rgb(88, 88, 88);
+      }
+      .department__value-container {
+        padding: 2px 15px;
+        font-size: 15px;
+        @media (max-width: $largeDesktop) {
+          font-size: 11px;
+        }
+      }
+      .department__indicator {
+        @media (max-width: $largeDesktop) {
+          padding: 4px;
+        }
+      }
+    }
+    ::-webkit-input-placeholder {
+      font-weight: 500;
+    }
+
+    :-ms-input-placeholder {
+      font-weight: 500;
+    }
+
+    ::placeholder {
+      font-weight: 500;
+    }
+  }
+  button {
+    &.recurring-btn {
+      width: 100%;
+      background: transparent;
+      box-shadow: none;
+      border: 1px solid rgba(126, 129, 137, 0.3);
+      border-radius: 0.25rem;
+      height: 57px;
+      font-weight: 500;
+      color: #4c4c4c;
+      text-align: left;
+      padding-left: 18px;
+      padding-right: 18px;
+
+      @media (max-width: $largeDesktop) {
+        height: 32px;
+        font-size: 11px;
+      }
+    }
+  }
+
+  ::-webkit-input-placeholder {
+    font-size: 15px !important;
+    font-family: "Raleway" !important;
+    @media (max-width: $largeDesktop) {
+      font-size: 11px !important;
+      // font-weight: 500;
+    }
+  }
+  :-ms-input-placeholder {
+    font-size: 15px !important;
+    font-family: "Raleway" !important;
+    @media (max-width: $largeDesktop) {
+      font-size: 11px !important;
+      // font-weight: 500;
+    }
+  }
+  ::placeholder {
+    font-size: 15px !important;
+    font-family: "Raleway" !important;
+    @media (max-width: $largeDesktop) {
+      font-size: 11px !important;
+      // font-weight: 500;
+    }
+  }
+
+  .date {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(76, 76, 76);
+    font-family: "roboto";
+    @media (max-width: $largeDesktop) {
+      font-size: 12px;
+    }
+  }
+  .react-datepicker-wrapper {
+    width: 100%;
+    input {
+      background: url(../images/icons/calendar.png);
+      background-position: 95% 50%;
+      background-repeat: no-repeat;
+      @media (max-width: $largeDesktop) {
+        background-size: 16px;
+      }
+    }
+  }
+}
+
+.recurring-modal {
+  .form-check-input {
+    display: none;
+  }
+  .react-datepicker-wrapper {
+    width: auto;
+  }
+  label {
+    &.radio-icon {
+      position: relative;
+      &:before {
+        content: "";
+        background-image: url("../images/icons/circle-shape.svg");
+        background-size: cover;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        right: 100%;
+        margin-right: 5px;
+        top: 5px;
+        @media (max-width: $largeDesktop) {
+          width: 11px;
+          height: 11px;
+          top: 2px;
+        }
+      }
+    }
+  }
+  input {
+    &:checked {
+      & + label {
+        &.radio-icon {
+          &:before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            background-image: url("../images/icons/radio-on-button.svg");
+            position: absolute;
+            right: 100%;
+            margin-right: 5px;
+            top: 5px;
+            @media (max-width: $largeDesktop) {
+              width: 11px;
+              height: 11px;
+              top: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+  label {
+    &.checkbox-icon {
+      position: relative;
+      &:before {
+        content: "";
+        background-image: url("../images/icons/checkbox.png");
+        background-size: cover;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 100%;
+        margin-right: 10px;
+        top: 2px;
+        @media (max-width: $largeDesktop) {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+  input {
+    &:checked {
+      & + label {
+        &.checkbox-icon {
+          &:before {
+            content: "";
+            background-image: url("../images/icons/Checkedbox.png");
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 100%;
+            margin-right: 10px;
+            top: 2px;
+            @media (max-width: $largeDesktop) {
+              width: 12px;
+              height: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #37466a;
+  }
+
+  .pattern-wrap {
+    display: flex;
+    margin: 31px 0;
+    @media (max-width: $largeDesktop) {
+      margin: 20px 0;
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+    .pattern-radio {
+      flex: 0 0 110px;
+      max-width: 110px;
+
+      @media (max-width: $tablet) {
+        max-width: none;
+        flex: 0 0 100%;
+        border-bottom: 1px solid rgba(126, 129, 137, 0.3);
+        margin-bottom: 20px;
+      }
+      fieldset {
+        margin-left: 18px;
+        border-right: 1px solid rgba(126, 129, 137, 0.3);
+        @media (max-width: $tablet) {
+          border-right: 0;
+        }
+      }
+      .form-group {
+        margin-bottom: 5px;
+        @media (max-width: $tablet) {
+          display: inline-block;
+          min-width: 100px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    label {
+      font-size: 15px;
+      color: rgb(88, 88, 88);
+      margin-bottom: 0;
+      @media (max-width: $largeDesktop) {
+        font-size: 11px;
+      }
+    }
+
+    .pattern-content {
+      flex: 0 0 calc(100% - 110px);
+      max-width: calc(100% - 110px);
+      padding-left: 40px;
+      @media (max-width: $tablet) {
+        padding-left: 20px;
+      }
+      &.month-content {
+        padding-left: 60px;
+        @media (max-width: $tablet) {
+          padding-left: 35px;
+        }
+      }
+      &.week-content {
+        padding-left: 30px;
+        @media (max-width: $tablet) {
+          padding-left: 0;
+        }
+      }
+      &.yearly-content {
+        padding-left: 45px;
+        @media (max-width: $tablet) {
+          padding-left: 20px;
+        }
+      }
+
+      .every-pattern {
+        margin-bottom: 0;
+        .form-control {
+          width: 73px;
+          margin: 0 10px;
+          height: 40px;
+          font-family: "roboto";
+          text-align: center;
+          @media (max-width: $largeDesktop) {
+            width: 55px;
+            height: 32px;
+            font-size: 12px;
+          }
+          @media (max-width: $phone) {
+            margin: 0 8px;
+          }
+        }
+        .form-check-input {
+          margin-top: 0 !important;
+          margin: 0 18px;
+          height: 40px;
+          margin-top: -7px;
+        }
+
+        .pattern-select {
+          background: #eee;
+          border-radius: 5px;
+          .pattern__menu {
+            width: 130px;
+            @media (max-width: $largeDesktop) {
+              width: 90px;
+            }
+          }
+          @media (max-width: $largeDesktop) {
+            font-size: 12px;
+          }
+          .pattern__control {
+            min-height: 40px;
+            background-color: transparent;
+            border-color: transparent;
+            min-width: 100px;
+            @media (max-width: $largeDesktop) {
+              min-width: 90px;
+              min-height: 34px;
+            }
+            // &:hover, &:focus, &:active{
+            //   border: 0!important;
+            //   box-shadow: none!important;
+            //   border-radius: 5px;
+            // }
+          }
+          .pattern__indicators {
+            .pattern__indicator {
+              padding: 0;
+            }
+            .pattern__indicator-separator {
+              background-color: transparent;
+            }
+          }
+          .pattern__input {
+            width: 40px;
+          }
+        }
+      }
+    }
+    .weeks-name {
+      margin-left: 30px;
+      .form-group {
+        width: 118px;
+        @media (min-width: $tablet) {
+          width: 140px;
+        }
+      }
+      input[type="checkbox"] {
+        transform: scale(1.8);
+        margin-left: -1.7rem;
+      }
+    }
+  }
+  .recurrence-section {
+    label {
+      &.lb-strt {
+        line-height: 9.9px;
+        font-size: 15px;
+        @media (max-width: $largeDesktop) {
+          font-size: 12px;
+        }
+      }
+    }
+    input {
+      &.form-control {
+        height: 40px;
+        @media (max-width: $largeDesktop) {
+          height: 32px;
+          background-size: 14px;
+          line-height: 5;
+        }
+      }
+    }
+    .range-wrap {
+      label {
+        min-width: 80px;
+        @media (max-width: $largeDesktop) {
+          font-size: 11px;
+          margin: 0;
+        }
+        @media (max-width: 375px) {
+          margin-left: 4px;
+        }
+      }
+      .every-pattern {
+        input[type="text"] {
+          width: 73px;
+          margin: 0 18px 0 10px;
+          font-family: "roboto";
+          text-align: center;
+          @media (max-width: $largeDesktop) {
+            font-size: 12px;
+          }
+          @media (max-width: 375px) {
+            width: 53px;
+            margin: 0px 10px;
+          }
+          @media (min-width: $phone) and (max-width: 630px) {
+            width: 53px;
+            margin: 0px 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.recurring-modal {
+  .recurrence-section {
+    .startDate-icon {
+      position: absolute;
+      top: 8px;
+      right: 70px;
+    }
+    .endDate-icon {
+      position: absolute;
+      top: 8px;
+      right: 23px;
+    }
+  }
+  .dates {
+    .react-datepicker-wrapper {
+      margin-left: 10px;
+    }
+    .label {
+      min-width: 80px;
+    }
+  }
+}
+
+.invite-screen {
+  h2 {
+    font-size: 24px;
+    color: #37466a;
+    font-weight: 700;
+    @media (max-width: $largeDesktop) {
+      font-size: 18px;
+    }
+  }
+  p {
+    font-size: 18px;
+    color: rgba(55, 70, 106, 0.6);
+    margin-bottom: 37px;
+    @media (max-width: $largeDesktop) {
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+  }
+  .invite__indicators {
+    display: none;
+  }
+  .invite__control {
+    @media (max-width: $largeDesktop) {
+      font-size: 13px;
+    }
+    &.invite__control--is-focused,
+    &.invite_control--menu-is-open {
+      .invite__value-container {
+        background-image: none !important;
+      }
+      .invite__placeholder {
+        display: none;
+      }
+    }
+  }
+
+  .invite__value-container {
+    min-height: 56px;
+    max-height: 110px;
+    background-image: url("../images/icons/invite-search.svg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 20px 50%;
+    overflow-y: auto;
+    &.invite__value-container--has-value {
+      background-image: none !important;
+    }
+
+    @media (max-width: $tablet) {
+      background-position: 16px 50%;
+      background-size: 18px;
+    }
+    @media (max-width: $phone) {
+      background-position: 10px 50%;
+      background-size: 16px;
+    }
+    .invite__placeholder {
+      padding-left: 50px;
+      @media (max-width: $tablet) {
+        padding-left: 40px;
+      }
+      @media (max-width: $phone) {
+        padding-left: 30px;
+        font-size: 14px;
+      }
+    }
+
+    img {
+      display: none !important;
+    }
+    // &:before {
+    //   content: "";
+    //   background: url("../images/icons/invite-search.svg");
+    //   background-size: cover;
+    //   width: 20px;
+    //   height: 20px;
+    //   position: absolute;
+    //   left: 23px;
+    //   @media(max-width: $tablet){
+    //     left: 18px;
+    //     width: 16px;
+    //     height: 16px;
+    //   }
+    //   @media(max-width: $phone){
+    //     left: 14px;
+    //     width: 14px;
+    //     height: 14px;
+    //   }
+    // }
+  }
+  .inviteUserCircle {
+    height: 50px;
+    width: 50px;
+    background-color: #d0eaff;
+    border-radius: 100%;
+    text-align: center;
+    color: black;
+    position: relative;
+    margin-right: 15px;
+    font-size: 13px;
+    @media (max-width: $largeDesktop) {
+      height: 40px;
+      width: 40px;
+      font-size: 11px;
+    }
+  }
+
+  .invite-value {
+    display: flex;
+    justify-content: row;
+    justify-content: space-between;
+    align-items: center;
+    .avatar-img {
+      width: 42px;
+      height: 42px;
+      margin-right: 20px;
+      @media (max-width: $tablet) {
+        width: 38px;
+        height: 38px;
+        margin-right: 10px;
+      }
+      @media (max-width: $phone) {
+        width: 34px;
+        height: 34px;
+      }
+    }
+    .checked-img {
+      margin-left: 13px;
+      width: 20px;
+      width: 20px;
+      @media (max-width: $tablet) {
+        width: 18px;
+        height: 18px;
+        margin-left: 7px;
+      }
+      @media (max-width: $phone) {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    .icons {
+      display: none;
+    }
+    .active {
+      .icons {
+        display: inline-flex;
+        @media (max-width: $tablet) {
+          width: 18px;
+          height: 18px;
+        }
+        @media (max-width: $phone) {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+  .invite__option {
+    height: 72px;
+    display: grid;
+    padding: 10px 18px;
+    @media (max-width: $largeDesktop) {
+      height: 53px;
+      padding: 5px 18px;
+    }
+    &:nth-child(2n + 1) {
+      background-color: rgba(#dfeffd, 0.2);
+    }
+    &:nth-child(2n) {
+      background-color: #fff;
+    }
+    &:hover {
+      background-color: rgba(#dfeffd, 0.7);
+    }
+  }
+  .invite__menu {
+    .name {
+      font-size: 18px;
+      font-weight: 500;
+      color: rgba(#37466a, 0.8);
+      word-break: break-all;
+      display: flex;
+      align-items: center;
+      @media (max-width: $largeDesktop) {
+        font-size: 14px;
+      }
+    }
+  }
+  .user-edit {
+    display: flex;
+    align-items: center;
+    padding-right: 0;
+    .dropdown-menu {
+      &.show {
+        top: 0 !important;
+      }
+    }
+  }
+}
+
+.date-icon {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+}
+
+.monthly-div-one {
+  display: flex;
+  margin-top: 5px;
+}
+.monthly-div-two {
+  display: flex;
+  flex-wrap: wrap;
+  @media (min-width: 425px) and (max-width: $phone) {
+    width: 300px;
+  }
+}
+.sec-monthly-div-one {
+  display: flex;
+  padding-top: 8px;
+}
+.sec-monthly-div-two {
+  display: flex;
+  flex-wrap: wrap;
+  @media (min-width: 560px) and (max-width: 699px) {
+    width: 480px;
+  }
+  @media (min-width: $tablet) {
+    flex-wrap: nowrap;
+  }
+}
+.lb-width {
+  min-width: 60px;
+  @media (max-width: $largeDesktop) {
+    min-width: 46px;
+  }
+}
+.lb-strt {
+  min-width: 80px;
+  @media (max-width: 375px) {
+    margin-left: 4px;
+  }
+}
+.monthly-outer {
+  display: flex;
+  align-items: center;
+}
+.inner-monthly-div-two {
+  margin-bottom: 10px;
+  @media (min-width: $phone) {
+    align-items: center;
+    margin-bottom: 0px;
+  }
+}
+.inner-sec-monthly-div-fst {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  @media (min-width: 560px) {
+    margin-bottom: 0px;
+  }
+}
+.inner-sec-monthly-div-scnd {
+  display: flex;
+  align-items: center;
+}
+.lb-recur-w {
+  min-width: 90px;
+  @media (max-width: $largeDesktop) {
+    min-width: 60px;
+  }
+}
+.sec-yearly-div-one {
+  padding-top: 8px;
+}
+.sec-yearly-div-two {
+  display: flex;
+  flex-wrap: wrap;
+  @media (min-width: 450px) and (max-width: 558px) {
+    width: 330px;
+  }
+}
+.inner-yearly-one {
+  display: flex;
+  margin-bottom: 10px;
+  @media (min-width: 592px) {
+    margin-bottom: 0px;
+  }
+}
+.inner-yearly-two {
+  display: flex;
+  align-items: center;
+}
+.react-datepicker {
+  @media (max-width: 375px) {
+    max-width: 292px;
+    width: 100%;
+  }
+}
+.react-datepicker__navigation--next--with-today-button {
+  @media (max-width: 375px) {
+    right: 45px;
+  }
+}
+
+.pdf-shares {
+  .dropdown-menu {
+    // left: -120px !important;
+    width: 300px;
+    margin: 0;
+    margin-bottom: 12px;
+    color: #000;
+    padding-bottom: 12px;
+    padding-top: 0;
+    z-index: 1;
+    right: 0px;
+    top: 100% !important;
+    left: initial !important;
+    transform: initial !important;
+
+    @media (max-width: $largeDesktop) {
+      width: 215px;
+    }
+    .dropdown-header {
+      background: #c2f5f8;
+      color: #000;
+      padding: 15px 20px;
+      font-size: 18px;
+      margin-bottom: 12px;
+
+      @media (max-width: $largeDesktop) {
+        padding: 13px 20px;
+        font-size: 14px;
+      }
+    }
+    button {
+      font-weight: 500;
+      width: 100%;
+      text-align: left;
+      color: #000 !important;
+      padding-left: 20px;
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+      }
+
+      .fa,
+      .fas,
+      .far {
+        margin-right: 20px;
+        color: #109cc8;
+      }
+    }
+  }
+}
+.share-summary {
+  top: 20%;
+  .download-options {
+    margin-bottom: 30px;
+    button {
+      background: transparent;
+    }
+    .form-group {
+      label {
+        margin: 0;
+        font-weight: 500;
+        font-size: 16px;
+        color: #37466a;
+        //  line-height: 1.9;
+      }
+    }
+  }
+  .modal-body {
+    min-height: 300px;
+    .share__control {
+      min-height: 56px;
+      max-height: 110px;
+    }
+    h2 {
+      font-size: 22px;
+      color: #37466a;
+      font-weight: 700;
+    }
+  }
+  .share__indicators {
+    display: none;
+  }
+  .download-btn {
+    text-align: center;
+    button {
+      width: 122px;
+      margin-top: 25px;
+      background: #6c757d;
+      border: 0;
+      height: 40px;
+      font-weight: 600;
+    }
+  }
+}
+
+.react-datepicker__month {
+  @media (max-width: $tablet) {
+    margin: 0rem !important;
+  }
+}
+.react-datepicker__time-list-item {
+  @media (max-width: $tablet) {
+    padding: 5px 0px !important;
+    font-size: 11px;
+  }
+}
+.react-datepicker__time-container {
+  @media (max-width: $tablet) {
+    width: 62px !important;
+  }
+}
+.react-datepicker__time-box {
+  @media (max-width: $tablet) {
+    width: 62px !important;
+  }
+}
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__time-name {
+  @media (max-width: $tablet) {
+    width: 1.3rem !important;
+    font-size: 11px;
+  }
+}
+.react-datepicker__month-container {
+  @media (max-width: $tablet) {
+    width: 188px !important;
+  }
+}
+.modal-notes {
+  width: 100%;
+  max-width: 95%;
+  margin-top: 30px;
+  .modal-header {
+    background: none;
+    color: #000;
+    .close {
+      display: none;
+    }
+    span {
+      position: absolute;
+      right: 20px;
+      cursor: pointer;
+    }
+  }
+  .modal-body {
+    textarea {
+      width: 100%;
+      border: 0;
+      min-height: 730px;
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+      }
+    }
+  }
+}
+.alert-modal {
+  top: 35%;
+  .modal-header {
+    background: none;
+    border: 0;
+    color: #000;
+    padding: 15px 30px;
+    .close {
+      color: #000;
+    }
+  }
+  .modal-body {
+    padding: 1rem 2rem 2rem;
+    .attendingBtn-wrap {
+      margin-top: 25px;
+      text-align: right;
+    }
+  }
+  .attending-btn {
+    @media (max-width: $largeDesktop) {
+      font-size: 12px;
+    }
+  }
+  .invite__control {
+    max-height: 65px;
+    overflow: auto;
+    @media (max-width: $largeDesktop) {
+      font-size: 12px;
+    }
+  }
+  .invite__menu {
+    @media (max-width: $largeDesktop) {
+      font-size: 12px;
+    }
+  }
+}
+
+.reset-password {
+  max-width: 400px;
+  margin: 150px auto 0;
+  .close {
+    right: 0 !important;
+    color: #37466a;
+    left: auto !important;
+    span {
+      font-size: 35px !important;
+      margin-top: 4px !important;
+    }
+  }
+  .modal-header {
+    background-image: none !important;
+    padding-bottom: 0;
+    border-bottom: 0;
+    .modal-title {
+      color: #37466a;
+      font-weight: 800;
+    }
+  }
+  .reset-btn {
+    margin-top: 30px;
+    text-align: center;
+    button {
+      height: 45px;
+      padding: 0 55px;
+      &:after {
+        margin-left: 25px;
+      }
+    }
+  }
+}
+
+.freeTrial {
+  text-align: center;
+  h3 {
+    font-size: 22px;
+    @media (max-width: $largeDesktop) {
+      font-size: 16px;
+    }
+  }
+  p {
+    font-size: 16px;
+    @media (max-width: $largeDesktop) {
+      font-size: 12px;
+    }
+  }
+}
+.trialBtn {
+  font-weight: 500;
+  padding: 10px 40px;
+  border: 0;
+  background-image: linear-gradient(to right, #2bbeed, #22e5e7);
+}
+
+.deleteModal {
+  .modal-body {
+    padding: 24px 30px 40px;
+    h2 {
+      font-size: 18px;
+      margin-bottom: 25px;
+      text-align: center;
+      @media (max-width: $largeDesktop) {
+        font-size: 16px;
+      }
+    }
+    .license-download-btn {
+      button {
+        margin: 0 5px;
+        background: linear-gradient(to right, #19b5e8, #14ecee);
+        border: 0;
+        color: #fff;
+        padding: 6px 30px;
+        border-radius: 6px;
+        font-weight: 500;
+        height: 37px;
+        @media (max-width: $largeDesktop) {
+          padding: 4px 20px;
+          height: 33px;
+        }
+        &.bordered {
+          border: 1px solid #19b5e8;
+          color: #19b5e8;
+          background: transparent !important;
+          &:focus,
+          &:active {
+            box-shadow: 0 0 0 0.1rem rgba(#19b5e8, 0.3) !important;
+          }
+        }
+        &:hover {
+          background: linear-gradient(to left, #19b5e8, #14ecee);
+        }
+      }
+    }
+  }
+  .bottomText {
+    font-size: 14px;
+    color: #19b5e8;
+    padding: 0 60px;
+  }
+  label {
+    font-size: 14px;
+  }
+  .data-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  .react-datepicker-wrapper {
+    width: 70%;
+    margin-left: 10px;
+    font-size: 12px;
+    @media (max-width: $phone) {
+      width: 100%;
+    }
+
+    input {
+      background: url(../images/icons/calendar.png);
+      background-position: left 10px center;
+      background-repeat: no-repeat;
+      background-size: 17px;
+      padding-left: 45px;
+      border-radius: 0;
+      width: 100%;
+      height: 30px;
+      border-bottom: 0;
+      box-shadow: none;
+      border: 1px solid rgba(126, 129, 137, 0.3);
+      border-radius: 5px;
+    }
+  }
+}

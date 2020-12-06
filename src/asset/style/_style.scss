@@ -1,0 +1,129 @@
+* {
+	outline: none !important;
+}
+body {
+	margin: 0;
+	font-family: 'Raleway';
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+ul {
+	list-style: none;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+.cursor-pointer {
+	cursor: pointer;
+}
+.main-wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.copyright {
+	text-align: center;
+	font-size: 14px;
+	@media (max-width: $largeDesktop) {
+		font-size: 12px;
+	}
+	a {
+		color: #25bae9;
+	}
+}
+.container {
+	@media (min-width: 1400px) {
+		max-width: 1300px;
+	}
+}
+
+.loader {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
+	z-index: 999;
+	.load-text {
+		margin-top: 15px;
+		font-size: 25px;
+		color: #20a9d7;
+		font-weight: 600;
+		@media (max-width: $largeDesktop) {
+			font-size: 19px;
+		}
+	}
+	&.payLoading {
+		background: #ffffff7a;
+		.load-text {
+			font-size: 35px;
+			font-weight: 600;
+			color: #0a799e;
+		}
+	}
+}
+.react-datepicker__time-list-item--disabled {
+	opacity: 0.3 !important;
+}
+.react-datepicker__time-container {
+	ul.react-datepicker__time-list {
+		li.react-datepicker__time-list-item {
+			font-size: 12px;
+		}
+	}
+}
+.orderSection-1 {
+	@media (max-width: 1200px) {
+		order: 1;
+	}
+}
+.orderSection-2 {
+	@media (max-width: 1200px) {
+		order: 2;
+	}
+}
+.orderSection-3 {
+	@media (max-width: 1200px) {
+		order: 3;
+	}
+}
+.orderSection-4 {
+	@media (max-width: 1200px) {
+		order: 4;
+	}
+}
+.orderSection-5 {
+	@media (max-width: 1200px) {
+		order: 5;
+	}
+}
+.orderSection-6 {
+	@media (max-width: 1200px) {
+		order: 6;
+	}
+}
+
+.margin-bottom {
+	@media (max-width: 1200px) {
+		margin-bottom: 20px;
+	}
+}
+
+input::-ms-clear {
+	display: none;
+}
+.popup-select {
+	& > div {
+		background: #fff !important;
+		border: 1px solid #7e8189 !important;
+	}
+}

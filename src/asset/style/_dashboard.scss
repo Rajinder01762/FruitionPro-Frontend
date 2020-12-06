@@ -1,0 +1,2246 @@
+.key-wrap {
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 8px;
+
+    &.key {
+      left: 14px;
+    }
+
+    &.checked {
+      right: 17px;
+    }
+  }
+}
+
+.dashboard-wrapper {
+  width: 100%;
+  padding-left: 345px;
+  padding-top: 190px;
+  padding-right: 60px;
+  padding-bottom: 30px;
+  // min-height: 100vh;
+  min-height: calc(100vh - 56px);
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $largeDesktop) {
+    padding-left: 236px;
+    padding-right: 30px;
+    padding-top: 160px;
+  }
+  @media (max-width: $desktop) {
+    padding-left: 30px;
+    transition: 0.3s;
+    padding-top: 120px;
+  }
+
+  @media (max-width: $phone) {
+    padding-right: 23px;
+    padding-left: 23px;
+    padding-top: 100px;
+  }
+  &.add-agenda-screen {
+    padding-bottom: 40px;
+    @media (max-width: $desktop) {
+      padding-bottom: 20px;
+    }
+    @media (max-width: $phone) {
+      padding-bottom: 0;
+    }
+    .modal-body {
+    }
+  }
+
+  .meeting-btn {
+    margin-left: 0;
+    @media (max-width: $phone) {
+      width: 200px;
+      height: 46px;
+      font-size: 14px;
+    }
+    &:before {
+      @media (max-width: $phone) {
+        height: 16px;
+        width: 16px;
+        left: 23px;
+      }
+    }
+  }
+  .import-btn {
+    margin-bottom: 35px;
+  }
+
+  .btn {
+    &-gradient {
+      padding: 0 29px;
+      height: 42.9px;
+
+      // @media (max-width: $phone) {
+      //   font-size: 12px;
+      //   padding: 0 15px;
+      //   height: 33px;
+      //   padding: 0 15px;
+      //   height: 32px;
+      // }
+
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  .title-wrap {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid;
+    border-color: rgba(#1b2335, 0.05);
+    padding-bottom: 12.9px;
+    .multiple-usersBtn {
+      .btn {
+        margin: 0 10px;
+      }
+    }
+    .btn {
+      padding: 0 12px;
+      height: 34px;
+    }
+  }
+  .agenda-wrap {
+    display: flex;
+    justify-content: space-between;
+    button {
+      padding-right: 0;
+      margin-right: -7px;
+      background: none !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      color: #000;
+      @media (max-width: $phone) {
+        font-size: 14px;
+      }
+    }
+    .agenda-title {
+      width: 90%;
+      overflow-wrap: break-word;
+    }
+  }
+  .title {
+    font-size: 26px;
+    font-weight: 800;
+    color: rgb(55, 70, 106);
+    @media (max-width: $largeDesktop) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $phone) {
+      font-size: 18px;
+      margin-top: 5px;
+    }
+  }
+  .agenda-dropdown {
+    width: 10%;
+    text-align: right;
+    &.shares-title {
+      .share-dropdown {
+        float: right;
+        display: block;
+      }
+
+      button {
+        background: none !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        color: #000;
+        @media (max-width: $phone) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .agenda-header {
+    span {
+      button {
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
+
+  .dashboard-content {
+    padding-left: 45px;
+    border-left: 2px solid;
+    border-color: rgba(#1b2335, 0.05);
+    flex: 0 0 100%;
+    width: 100%;
+    @media (max-width: $largeDesktop) {
+      padding-left: 30px;
+    }
+    @media (max-width: $desktop) {
+      padding-left: 0;
+      border: none;
+    }
+  }
+
+  .list-content {
+    padding-top: 33.9px;
+  }
+
+  .user-list {
+    list-style: none;
+    padding: 0;
+    color: rgba(55, 70, 106, 0.9);
+
+    li {
+      display: flex;
+      padding-left: 17px;
+      align-items: center;
+
+      &:nth-child(2n-1) {
+        background-color: rgba(#dfeffd, 0.2);
+      }
+
+      img {
+        width: 45px;
+        height: 45px;
+      }
+
+      .user-details {
+        padding-left: 23px;
+        padding-right: 23px;
+        padding-top: 15px;
+        width: 60%;
+
+        @media (max-width: $phone) {
+          width: 100%;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        h4 {
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 0;
+          word-break: break-all;
+          @media (max-width: $largeDesktop) {
+            font-size: 12px;
+          }
+        }
+
+        p {
+          font-size: 14px;
+          font-style: italic;
+          font-weight: 500;
+          word-break: break-word;
+          @media (max-width: $largeDesktop) {
+            font-size: 11px;
+          }
+        }
+      }
+      .user-status {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 33%;
+        align-items: center;
+        @media (max-width: $largeDesktop) {
+          font-size: 12px;
+        }
+        @media (max-width: $phone) {
+          width: 70%;
+          flex-direction: column;
+        }
+      }
+
+      .status-btn {
+        width: 50%;
+        font-size: 15.9px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 14px;
+
+        a {
+          color: #109cc8;
+          font-size: 16px;
+          @media (max-width: $largeDesktop) {
+            font-size: 12px;
+          }
+        }
+      }
+      .status {
+        width: 50%;
+        font-weight: 600;
+        text-align: center;
+        @media (max-width: $phone) {
+          font-size: 12px;
+        }
+      }
+
+      .user-edit {
+        width: 7%;
+      }
+    }
+    .dropdown-menu {
+      &.show {
+        left: -20px !important;
+      }
+    }
+    .taskUser-circle {
+      width: 50px;
+      height: 50px;
+      background-color: rgb(208, 234, 255);
+      border-radius: 100%;
+      text-align: center;
+      color: black;
+      position: relative;
+      z-index: -1;
+      font-weight: 500;
+      @media (max-width: $largeDesktop) {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+      }
+    }
+  }
+  .dropdown-more {
+    margin-right: -12px;
+    .dropdown-menu {
+      z-index: 0;
+      &.show {
+        min-width: 65px !important;
+        left: -4px !important;
+        justify-content: center;
+        text-align: center;
+        z-index: 999;
+        font-size: 14px;
+        @media (max-width: $largeDesktop) {
+          font-size: 11px;
+        }
+      }
+      div {
+        margin: 0 auto !important;
+        margin-bottom: 5px !important;
+      }
+    }
+    button {
+      background: transparent;
+      color: #000;
+      border: 0;
+      @media (max-width: $largeDesktop) {
+        font-size: 11px;
+      }
+      &:focus {
+        border: 0 !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+
+  .dropdown-more {
+    .dropdown-menu {
+      &.show {
+        min-width: 65px !important;
+        left: -4px !important;
+        justify-content: center;
+        text-align: center;
+        @media (max-width: $largeDesktop) {
+          min-width: 50px !important;
+        }
+      }
+
+      div {
+        margin: 0 auto !important;
+        margin-bottom: 5px !important;
+      }
+    }
+
+    button {
+      background: transparent;
+      color: #000;
+      border: 0;
+
+      &:focus {
+        border: 0 !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+  .profile-date {
+    .react-datepicker-wrapper {
+      width: 150px;
+      margin-right: 10px;
+      input {
+        background: #f0f0f0;
+        border: 1px solid rgba(227, 227, 227, 0.9);
+        font-family: "roboto";
+        font-weight: 700;
+      }
+    }
+    span {
+      font-size: 13px;
+      font-family: "roboto";
+      color: rgb(91, 91, 91);
+      font-style: italic;
+      font-weight: 500;
+      @media (max-width: $largeDesktop) {
+        font-size: 10px;
+      }
+    }
+  }
+  .selectContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .popup-select {
+      width: 100%;
+      .profile__control {
+        height: 45px;
+        background: #fff;
+        border: 1px solid #7e8189;
+        svg {
+          fill: #7e8189;
+        }
+        @media (max-width: $largeDesktop) {
+          font-size: 10px;
+          height: 34px;
+        }
+      }
+    }
+
+    button {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      margin-left: 10px;
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: transparent !important;
+        box-shadow: none !important;
+      }
+    }
+    img {
+      width: 30px;
+      height: auto;
+      @media (max-width: $largeDesktop) {
+        width: 25px;
+      }
+    }
+    .profile__option,
+    .profile__control {
+      p {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      span {
+        img {
+          width: 8px;
+        }
+      }
+    }
+  }
+}
+
+.user-edit {
+  padding-right: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: $phone) {
+    padding-right: 0;
+  }
+  .dropdown {
+    &.Btnfade {
+      cursor: auto;
+      .dropdown-item {
+        color: rgba(#333, 0.4);
+        cursor: auto;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    &.show {
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 3px;
+      border: none;
+      box-shadow: 0 0 6px 3px rgba(74, 74, 74, 0.17);
+      min-width: 84px;
+
+      @media (max-width: $largeDesktop) {
+        font-size: 11px;
+      }
+
+      @media (max-width: $desktop) {
+        left: 0 !important;
+      }
+
+      .dropdown-item {
+        padding: 0;
+        text-align: center;
+        color: #212529 !important;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .dropdown {
+    .btn {
+      background-color: transparent !important;
+      border: none;
+      &:hover,
+      &:active,
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+.btn.btn-meeting-header.primary {
+  width: 100%;
+  text-align: left;
+  // background-color: rgba(223, 239, 253, 0.2);
+  padding: 20px 43px;
+  margin: 0 !important;
+  text-transform: capitalize;
+  font-weight: 600;
+  background: rgba(#dfeffd, 0.2);
+  font-size: 18px;
+  color: #37466a;
+  position: relative;
+
+  &:after {
+    content: "";
+    background-image: url("../images/dashboard-icons/expand-button.svg");
+    position: absolute;
+    right: 27px;
+    top: 27px;
+    width: 17px;
+    height: 17px;
+    z-index: 99999;
+    background-repeat: no-repeat;
+    transform: rotate(-93deg);
+  }
+
+  &.collapse-active {
+    &:after {
+      transform: none;
+    }
+  }
+}
+
+.dashboard-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 33px;
+  border-bottom: 1px solid rgba(#1b2335, 0.05);
+
+  h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #37466a;
+
+    @media (max-width: $largeDesktop) {
+      font-size: 20px;
+    }
+  }
+
+  a {
+    color: #0740e3;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: right;
+    @media (max-width: $largeDesktop) {
+      font-size: 11px;
+    }
+    &.meetLinks {
+      color: #000;
+    }
+  }
+  .clear-allBtn {
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 0;
+    background: none;
+    @media (max-width: $largeDesktop) {
+      font-size: 11px;
+    }
+  }
+}
+.dashboard-listWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  // ul,
+  // li {
+  //   margin-bottom: 0 !important;
+  // }
+  .edit-meetingBtn {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    outline: 0 !important;
+    color: #6d6d6d;
+    font-weight: 600;
+    font-size: 16px;
+    @media (max-width: $largeDesktop) {
+      font-size: 12px;
+    }
+    img {
+      @media (max-width: $largeDesktop) {
+        width: 12px;
+      }
+    }
+  }
+}
+
+.meeting-header {
+  border-bottom: 2px solid rgb(41, 197, 236);
+  padding-bottom: 17px;
+  text-align: center;
+  margin: 0;
+  font-size: 26px;
+  font-weight: 500;
+  color: rgb(55, 70, 106);
+  @media (max-width: $largeDesktop) {
+    font-size: 20px;
+  }
+
+  span {
+    font-family: "Roboto";
+    font-weight: bold;
+  }
+}
+
+.meetings-list {
+  padding: 0;
+  &.list-overflow {
+    height: 345px;
+    overflow-y: auto;
+    @media (max-width: 1200px) {
+      max-height: 345px;
+    }
+    @media (max-width: $tablet) {
+      height: auto;
+    }
+  }
+  &.notification-list {
+    li {
+      &.read {
+        background: #fff;
+      }
+    }
+    .meetings-user {
+      width: 73px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
+    }
+  }
+
+  li {
+    display: flex;
+    margin-bottom: 2px;
+    background-color: #f3fcfe;
+    border-radius: 5px;
+    cursor: pointer;
+    min-height: 66px;
+    // &:nth-child(2n-1){
+    //   background-color: rgba(#dfeffd,.2);
+
+    // }
+    @media (max-width: $largeDesktop) {
+      min-height: 50px;
+    }
+
+    &:not(:last-child) {
+      .meeting-content {
+        border-bottom: 1px solid rgba(#1b2335, 0.05);
+      }
+    }
+    .taskUser-circle {
+      color: #000;
+      background: rgb(208, 234, 255);
+      height: 50px;
+      width: 50px;
+      border-radius: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 0;
+      margin-right: 5px;
+      margin-left: 5px;
+      font-weight: 600;
+      @media (max-width: $largeDesktop) {
+        height: 32px;
+        width: 32px;
+      }
+    }
+
+    &.not-started {
+      background: rgba(#ffc70b, 0.2);
+      color: #fff;
+      .date {
+        background: #ffc70b;
+      }
+      h5 {
+        color: #fff;
+      }
+      .taskUser-circle {
+        background: #ffc70b;
+        color: #fff;
+      }
+    }
+    &.in-progress {
+      background: rgba(#4aabe0, 0.2);
+      color: #fff;
+      .date {
+        background: #4aabe0;
+      }
+      h5 {
+        color: #fff;
+      }
+      .taskUser-circle {
+        background: #4aabe0;
+        color: #fff;
+      }
+    }
+    &.completed {
+      background: rgba(#85c13b, 0.2);
+      color: #fff;
+      .date {
+        background: #85c13b;
+      }
+      h5 {
+        color: #fff;
+      }
+      .taskUser-circle {
+        background: #85c13b;
+        color: #fff;
+      }
+    }
+    &.over-due {
+      background: rgba(#d64032, 0.2);
+      color: #fff;
+      .date {
+        background: #d64032;
+      }
+      h5 {
+        color: #fff;
+      }
+      .taskUser-circle {
+        background: #d64032;
+        color: #fff;
+      }
+    }
+
+    .inviteUserIcon {
+      @media (max-width: $largeDesktop) {
+        font-size: 11px;
+      }
+      img {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @media (max-width: $largeDesktop) {
+          width: 32px !important;
+          height: 32px !important;
+        }
+      }
+    }
+  }
+
+  .date {
+    flex: 0 0 73px;
+    max-width: 0 0 73px;
+    background: #c8effb;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: rgba(55, 70, 106, 0.8);
+    padding: 5px;
+    @media (max-width: $largeDesktop) {
+      flex: 0 0 50px;
+      max-width: 50px;
+    }
+    h4 {
+      font-size: 16px;
+      margin-bottom: 0;
+      font-weight: 600;
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+      }
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: 0;
+      font-weight: 700;
+      font-family: "Roboto";
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+      }
+    }
+    h5 {
+      font-size: 14px;
+      font-weight: 600;
+      font-family: "roboto";
+      margin-bottom: 0;
+      @media (max-width: $largeDesktop) {
+        font-size: 11px;
+      }
+    }
+  }
+
+  .meeting-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: calc(100% - 73px);
+    max-width: calc(100% - 73px);
+    margin: 0 20px;
+    @media (max-width: $largeDesktop) {
+      flex: calc(100% - 50px);
+      max-width: calc(100% - 50px);
+    }
+    h5 {
+      font-size: 16px;
+      margin: 0;
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+      }
+      .meetTitle {
+        font-weight: 500;
+        color: #37466a;
+      }
+    }
+
+    .meetings-user {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 34px;
+        height: 34px;
+        // margin: 0 4px;
+      }
+      .user-name {
+        height: 34px;
+        width: 34px;
+        font-size: 12px;
+        background-color: rgb(208, 234, 255);
+        border-radius: 24px;
+        text-align: center;
+        color: black;
+        position: relative;
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .report-user {
+        height: 38px;
+        width: 38px;
+        background-color: #d0eaff;
+        border-radius: 24px;
+        text-align: center;
+        color: black;
+        margin-left: 5px;
+        position: relative;
+        font-size: 14px;
+        @media (max-width: $largeDesktop) {
+          height: 32px;
+          width: 32px;
+          font-size: 11px;
+        }
+        img {
+          width: 38px;
+          height: 38px;
+          @media (max-width: $largeDesktop) {
+            height: 32px !important;
+            width: 32px !important;
+          }
+        }
+      }
+    }
+    .meeting-user-inner {
+      @media (min-width: $phone) {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .meeting-details {
+      padding: 13px 0;
+      .notification-title {
+        p {
+          font-weight: 400;
+          word-break: break-word;
+        }
+      }
+      &.notification-text {
+        padding: 6px 0;
+      }
+
+      h3 {
+        font-size: 14px;
+        margin-bottom: 0;
+        color: rgb(55, 70, 106);
+        font-weight: 600;
+        word-break: break-word;
+        @media (max-width: $largeDesktop) {
+          font-size: 11px;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        margin-top: 3px;
+        margin-bottom: 0;
+        color: rgba(55, 70, 106, 0.8);
+        font-weight: 600;
+        font-family: "roboto";
+        word-break: break-word;
+        @media (max-width: $largeDesktop) {
+          font-size: 11px;
+        }
+        &.notification-title {
+          font-weight: 500;
+        }
+      }
+      &.lock {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .lock-icon {
+          width: 12px;
+          img {
+            @media (max-width: $largeDesktop) {
+              width: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.schedule {
+    height: 310px;
+    overflow-y: auto;
+    @media (min-width: 1200px) {
+      margin-bottom: 75px;
+    }
+    @media (max-width: 1200px) {
+      max-height: 310px;
+    }
+    @media (max-width: $tablet) {
+      height: auto;
+    }
+    // &.past-meetings {
+    //   height: 275px;
+    //   @media (max-width: 1200px) {
+    //     max-height: 275px;
+    //   }
+    // }
+
+    li {
+      background: #3fbef1;
+      color: #fff;
+      margin-bottom: 10px;
+      box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1);
+    }
+    .date {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+  }
+  &.past-meetings {
+    height: 275px;
+    overflow-y: auto;
+    @media (max-width: 1200px) {
+      max-height: 275px;
+    }
+    @media (max-width: $tablet) {
+      height: auto;
+    }
+  }
+  .authorImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    img {
+      width: 40px;
+      height: 40px;
+      background: rgba(25, 189, 241, 0.5);
+      border-radius: 100%;
+      padding: 8px;
+    }
+  }
+}
+.no-meeting-list {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3fcfe;
+  p {
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 15px;
+    @media (max-width: $largeDesktop) {
+      font-size: 11px;
+    }
+  }
+}
+
+span.partImg {
+  border-radius: 100%;
+  img {
+    width: 60px !important;
+    height: 60px !important;
+    @media (max-width: $largeDesktop) {
+      width: 40px !important;
+      height: 40px !important;
+    }
+  }
+}
+span.inviteUserIcon {
+  border-radius: 100%;
+  img {
+    width: 50px !important;
+    height: 50px !important;
+
+    @media (max-width: $largeDesktop) {
+      width: 40px !important;
+      height: 40px !important;
+    }
+  }
+}
+
+.add-agenda-screen {
+  ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    &.header-list {
+      margin-bottom: 0;
+      flex-wrap: wrap;
+      li {
+        margin-right: 50px;
+        margin-bottom: 15px;
+        @media (max-width: $largeDesktop) {
+          font-size: 14px;
+        }
+        &.startMeetBtn {
+          button {
+            height: 42px;
+            border-radius: 5px;
+            padding: 0 28px;
+            background: #fff;
+            color: #2bbeed;
+            font-weight: 800;
+            text-transform: capitalize;
+            font-size: 18px;
+            border: 2px solid #2bbeed;
+
+            @media (max-width: $largeDesktop) {
+              padding: 0 12px;
+              font-size: 11px;
+              height: 33px;
+            }
+
+            &.disable {
+              opacity: 0.3;
+            }
+          }
+        }
+      }
+    }
+
+    // &.header-list {
+    //   li {
+    //     margin-right: 50px;
+    //   }
+    // }
+    li {
+      color: #6d6d6d;
+      font-weight: 600;
+      font-size: 18px;
+      img {
+        &.list-icon {
+          width: 23px;
+          margin-right: 20px;
+          @media (max-width: $largeDesktop) {
+            width: 18px;
+          }
+          @media (max-width: $phone) {
+            width: 14px;
+          }
+        }
+        &.navigation {
+          width: 35px;
+          @media (max-width: $largeDesktop) {
+            width: 18px;
+          }
+          @media (max-width: $phone) {
+            width: 14px;
+          }
+        }
+      }
+    }
+    label {
+      background: #f1f0f1;
+      color: #6d6d6d;
+      font-size: 17px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+    }
+    &.agenda-upload {
+      li {
+        margin-right: 10px;
+      }
+      label {
+        width: 131px;
+        height: 120px;
+        padding: 10px;
+        @media (max-width: $largeDesktop) {
+          width: 98px;
+          height: 90px;
+        }
+        p {
+          word-break: break-word;
+          width: 100%;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          line-height: 1.4;
+          @media (max-width: $largeDesktop) {
+            font-size: 12px;
+          }
+        }
+        svg {
+          fill: #6d6d6d;
+          width: 30px;
+          height: 30px;
+          @media (max-width: $largeDesktop) {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        input {
+          display: none;
+        }
+      }
+    }
+    &.document-upload {
+      li {
+        margin-right: 30px;
+      }
+      input {
+        display: none;
+      }
+      label {
+        width: 97px;
+        // min-height: 88px;
+        padding: 10px;
+        height: 120px;
+        max-height: 120px;
+        @media (max-width: $largeDesktop) {
+          width: 85px;
+          height: 100px;
+        }
+      }
+      .doc-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        a {
+          text-decoration: none;
+        }
+        img {
+          width: 40px;
+          @media (max-width: $largeDesktop) {
+            width: 25px;
+          }
+        }
+        p {
+          width: 100%;
+          overflow: hidden;
+          color: #2f2e2e;
+          padding-top: 5px;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          line-height: 1.4;
+          word-break: break-word;
+        }
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 12px;
+        font-weight: 500;
+        @media (max-width: $largeDesktop) {
+          font-size: 9px;
+        }
+      }
+    }
+  }
+  .edit-icon {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    button {
+      &.btn {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0;
+      }
+    }
+    .dropdown-menu {
+      color: rgba(#37466a, 0.8);
+      top: -23px !important;
+      padding: 0;
+      min-width: 125px;
+      @media (max-width: $largeDesktop) {
+        min-width: 100px;
+      }
+      button {
+        padding: 7px 10px;
+        @media (max-width: $largeDesktop) {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #6d6d6d;
+    margin-bottom: 21px;
+    @media (max-width: $largeDesktop) {
+      font-size: 18px;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #37466a;
+    @media (max-width: $largeDesktop) {
+      font-size: 15px;
+    }
+  }
+  h4 {
+    font-size: 16px;
+    color: #37466a;
+    text-align: right;
+    font-weight: 700;
+  }
+  textarea {
+    width: 100%;
+    min-height: 152px;
+    border: 1px solid rgba(#7e8189, 0.5);
+    border-radius: 5px;
+    padding: 5px 10px;
+    @media (max-width: $largeDesktop) {
+      font-size: 12px;
+    }
+  }
+  .meeting-summary-header {
+    padding-bottom: 27px;
+  }
+  .agenda-header {
+    margin-bottom: 25px;
+    @media (max-width: $phone) {
+      margin-bottom: 15px;
+    }
+  }
+  .field-section {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    border-top: 1px solid rgba(#1b2335, 0.09);
+    @media (max-width: $desktop) {
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+
+    @media (max-width: $phone) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  .agenda-addBtn {
+    display: none;
+  }
+  .upload-pdf {
+    input {
+      display: none;
+    }
+    img {
+      margin-left: 15px;
+      cursor: pointer;
+      @media (max-width: $largeDesktop) {
+        margin-left: 8px;
+        width: 17px;
+      }
+    }
+  }
+  .agenda-submitBtn {
+    margin-top: 57px;
+    text-align: center;
+    @media (max-width: $phone) {
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    button {
+      width: 207px;
+      height: 53px;
+      margin: 0 15px;
+      box-shadow: none;
+      text-transform: capitalize;
+      font-size: 19px;
+      padding: 0;
+      @media (max-width: $largeDesktop) {
+        width: 135px;
+        height: 43px;
+        font-size: 14px;
+      }
+    }
+  }
+  .documentAdd {
+    margin-top: 15px;
+    @media (max-width: $largeDesktop) {
+      margin-top: 10px;
+    }
+    ul {
+      padding-top: 0;
+    }
+    .edit-icon {
+      .dropdown-menu {
+        button {
+          padding: 13px;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+  // .modal-body {
+  //   .department-select {
+  //     font-size: 15px !important;
+  //   }
+  // }
+  .modal-notes {
+    textarea {
+      min-height: 89px;
+      margin-bottom: 20px;
+    }
+  }
+  .image-upload {
+    li {
+      margin-right: 20px;
+    }
+    // .circleBox {
+    //   width: 60px;
+    //   height: 60px;
+    //   @media (max-width: $largeDesktop) {
+    //     width: 40px;
+    //     height: 40px;
+    //   }
+    // }
+    label {
+      border-radius: 100%;
+      width: 60px;
+      height: 60px;
+      @media (max-width: $largeDesktop) {
+        width: 40px;
+        height: 40px;
+      }
+
+      &.image {
+        background: none;
+        div {
+          @media (max-width: $phone) {
+            height: 40px !important;
+            width: 40px !important;
+          }
+        }
+      }
+      span {
+        img {
+          width: 60px;
+          height: 60px;
+          @media (max-width: $largeDesktop) {
+            height: 40px;
+            width: 40px;
+          }
+        }
+      }
+    }
+    button {
+      display: none;
+    }
+    svg {
+      fill: #6d6d6d;
+      width: 20px;
+      height: 20px;
+      @media (max-width: $largeDesktop) {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    .online-user {
+      button {
+        display: block !important;
+      }
+      img {
+        height: 23px;
+        width: 23px;
+        position: absolute;
+        border-radius: 100%;
+        top: 61%;
+        right: 0;
+        background: #fff;
+        // padding: 5px;
+        @media (max-width: $largeDesktop) {
+          width: 15px;
+          height: 15px;
+        }
+      }
+      .greenCircle {
+        height: 23px;
+        width: 23px;
+        position: absolute;
+        border-radius: 100%;
+        top: 61%;
+        right: 0;
+        background: #22dd22;
+        padding: 5px;
+        @media (max-width: $largeDesktop) {
+          width: 15px;
+          height: 15px;
+        }
+      }
+      .orangeCircle {
+        height: 23px;
+        width: 23px;
+        position: absolute;
+        border-radius: 100%;
+        top: 61%;
+        right: 0;
+        background: #ffa500;
+        padding: 5px;
+        @media (max-width: $largeDesktop) {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+  .notes-area {
+    input {
+      border: 0;
+      font-size: 16px;
+      padding: 10px;
+      border-bottom: 1px solid rgba(126, 129, 137, 0.3);
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+      }
+    }
+    .task-label {
+      label {
+        margin-bottom: 0;
+        margin-top: 25px;
+      }
+    }
+    .assign-input {
+      background-image: url(../images/dashboard-icons/user.svg);
+      background-repeat: no-repeat;
+      background-position: center left;
+      background-size: 20px;
+      padding-left: 22px;
+      font-weight: 500;
+      width: 50%;
+      @media (max-width: $largeDesktop) {
+        background-size: 12px;
+        padding-left: 15px;
+      }
+      @media (max-width: $phone) {
+        width: 100%;
+      }
+
+      input {
+        width: 180px;
+      }
+      .assign__control {
+        margin-right: 10px;
+        box-shadow: none;
+        border: 0;
+        @media (max-width: $largeDesktop) {
+          font-size: 14px;
+          min-height: 32px;
+        }
+        .assign__value-container {
+          overflow-y: auto;
+          max-height: 70px;
+          min-height: 45px;
+          @media (max-width: $largeDesktop) {
+            min-height: 32px;
+          }
+        }
+
+        .assign__dropdown-indicator {
+          display: none;
+        }
+      }
+      .assign__menu {
+        max-width: 90%;
+        @media (max-width: $largeDesktop) {
+          font-size: 11px;
+        }
+      }
+    }
+    .add-task {
+      display: flex;
+      flex-wrap: wrap;
+      .task-content {
+        width: 95%;
+        padding-top: 15px;
+        @media (max-width: $phone) {
+          width: 86%;
+          margin-right: 10px;
+        }
+        .add-input {
+          width: 100%;
+          input {
+            width: 100%;
+            border: 0;
+          }
+        }
+        .multiSelect-task {
+          padding-left: 10px;
+          display: flex;
+          flex-direction: row;
+          border-bottom: 1px solid rgba(126, 129, 137, 0.3);
+          @media (max-width: $phone) {
+            flex-direction: column;
+          }
+          .react-datepicker {
+            .react-datepicker__time-list-item {
+              font-size: 12px;
+              font-weight: 400;
+              color: #000;
+            }
+          }
+        }
+      }
+      .addTask-icon {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 5%;
+        @media (max-width: $phone) {
+          width: 10%;
+        }
+        img {
+          @media (max-width: $largeDesktop) {
+            width: 21px;
+          }
+        }
+      }
+
+      .assign__indicators {
+        display: none;
+      }
+    }
+    .decision-task {
+      img {
+        @media (max-width: $largeDesktop) {
+          width: 21px;
+        }
+      }
+    }
+    ::-webkit-input-placeholder {
+      font-size: 16px !important;
+      font-family: "Raleway" !important;
+      font-weight: 500 !important;
+      @media (max-width: $largeDesktop) {
+        font-size: 12px !important;
+      }
+    }
+
+    :-ms-input-placeholder {
+      font-size: 16px !important;
+      font-family: "Raleway" !important;
+      font-weight: 500 !important;
+      @media (max-width: $largeDesktop) {
+        font-size: 12px !important;
+      }
+    }
+
+    ::placeholder {
+      font-size: 16px !important;
+      font-family: "Raleway" !important;
+      font-weight: 500 !important;
+      @media (max-width: $largeDesktop) {
+        font-size: 12px !important;
+      }
+    }
+    .add-note {
+      width: 100%;
+      border-radius: 0;
+    }
+    .react-datepicker-wrapper {
+      width: 50%;
+      @media (max-width: $phone) {
+        width: 100%;
+      }
+
+      input {
+        background: url(../images/icons/calendar.png);
+        background-position: 0 50%;
+        background-repeat: no-repeat;
+        padding-left: 45px;
+        border-radius: 0;
+        width: 100%;
+        height: 46px;
+        border-bottom: 0;
+        box-shadow: none;
+      }
+    }
+    .agenda-notesArea {
+      border-bottom: 1px solid rgba(126, 129, 137, 0.3);
+      text-overflow: ellipsis;
+      min-height: 25px;
+      max-height: 50px;
+      overflow-y: auto;
+      width: 100%;
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+      }
+      input {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+.profile-wrap {
+  max-width: 600px;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  .upload-icon {
+    margin: 0 auto;
+  }
+  .resetPass {
+    font-size: 15px;
+    font-weight: 600;
+    color: #25bae9;
+    cursor: pointer;
+    @media (max-width: $largeDesktop) {
+      font-size: 11px;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: #37466a;
+    @media (max-width: $largeDesktop) {
+      font-size: 15px;
+    }
+    &.personal-details{
+      border-top: 2px solid rgba(27, 35, 53, 0.05);
+      padding-top: 30px;
+    }
+  }
+}
+.camera-icon {
+  position: relative;
+  &:after {
+    content: "";
+    background: url("../images/dashboard-icons/photo-camera.svg");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: #fff;
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    top: 58%;
+    right: 0;
+    padding: 11px;
+    border-radius: 100%;
+  }
+}
+.switch {
+  position: relative;
+  display: block;
+  vertical-align: top;
+  // width: 100px;
+  // height: 30px;
+  width: 60px;
+  top: 10px;
+  height: 18px;
+  padding: 3px;
+  margin: 0;
+  // background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+  // background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+  background: rgba(#fff, 0.5);
+  border-radius: 18px;
+  // box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  box-sizing: content-box;
+  @media (max-width: $largeDesktop) {
+    top: 2px;
+  }
+
+  &.active {
+    .switch-label {
+      &:after {
+        opacity: 1;
+        left: 5px;
+      }
+      &:before {
+        opacity: 0;
+      }
+    }
+    .switch-handle {
+      right: 0;
+      left: auto;
+    }
+  }
+}
+.switch-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  box-sizing: content-box;
+  &:checked {
+    & ~ .switch-label {
+      // background-color: #E1B42B;
+      // box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+      &:before {
+        opacity: 0;
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+    & ~ .switch-handle {
+      left: 43px;
+      // box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+.switch-label {
+  position: relative;
+  display: block;
+  height: inherit;
+  font-size: 12px;
+  text-transform: uppercase;
+  // background: #eceeef;
+  // background: rgba(#fff, 0.5)!important;
+  border-radius: inherit;
+  // box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+  box-sizing: content-box;
+  transition: All 0.3s ease;
+  -webkit-transition: All 0.3s ease;
+  -moz-transition: All 0.3s ease;
+  -o-transition: All 0.3s ease;
+  @media (max-width: $largeDesktop) {
+    font-size: 11px;
+  }
+  &:before {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5em;
+    line-height: 1;
+    -webkit-transition: inherit;
+    -moz-transition: inherit;
+    -o-transition: inherit;
+    transition: inherit;
+    box-sizing: content-box;
+    content: attr(data-on);
+    right: 11px;
+    color: #000;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  }
+  &:after {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5em;
+    line-height: 1;
+    -webkit-transition: inherit;
+    -moz-transition: inherit;
+    -o-transition: inherit;
+    transition: inherit;
+    box-sizing: content-box;
+    content: attr(data-off);
+    left: 11px;
+    color: #000;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+  }
+}
+.switch-handle {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 31px;
+  height: 31px;
+  background: #fff;
+  // background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+  border-radius: 100%;
+  box-shadow: none;
+  transition: All 0.3s ease;
+  -webkit-transition: All 0.3s ease;
+  -moz-transition: All 0.3s ease;
+  -o-transition: All 0.3s ease;
+}
+
+.form-control::-webkit-inner-spin-button,
+.form-control::-webkit-calendar-picker-indicator {
+  // display: none;
+  // -webkit-appearance: none;
+}
+.contact-list {
+  li {
+    padding-left: 20px;
+    border-bottom: 1px solid rgba(27, 35, 53, 0.05);
+  }
+  .phone {
+    font-family: "roboto";
+  }
+}
+
+.pdf-content {
+  width: 700px;
+  margin: 0 auto;
+}
+.noMeetings {
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  @media (max-width: $largeDesktop) {
+    font-size: 19px;
+  }
+}
+.logo {
+  img {
+    height: 70px;
+    @media (max-width: $largeDesktop) {
+      height: 44px;
+    }
+  }
+}
+.meetings-card {
+  .meeting-heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #37466a;
+      margin-bottom: 0;
+      @media (min-width: 1200px) and (max-width: 1700px) {
+        font-size: 15px;
+      }
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+        line-height: 2.4;
+      }
+      span {
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        color: #109cc8;
+        background: #c8effb;
+        line-height: normal;
+        text-align: center;
+        font-family: "roboto";
+        font-size: 15px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: $largeDesktop) {
+          font-size: 11px;
+        }
+      }
+    }
+    a {
+      font-size: 14px;
+      font-weight: 500;
+      color: #109cc8;
+      cursor: pointer;
+      @media (max-width: $largeDesktop) {
+        font-size: 11px;
+      }
+    }
+  }
+}
+.margin-negative {
+  margin-top: -40px;
+  @media (max-width: 1200px) {
+    margin-top: 0 !important;
+  }
+}
+
+.pieChart-wrapper {
+  background-color: #f3fcfe;
+  padding: 30px;
+  border-radius: 5px;
+  @media (max-width: $phone) {
+    margin-bottom: 15px;
+  }
+  h4 {
+    font-size: 17px;
+    font-weight: 500;
+    color: rgba(55, 70, 106, 0.8);
+    @media (max-width: $largeDesktop) {
+      font-size: 13px;
+    }
+  }
+  .pieChart-content {
+    .pieChart-count {
+      font-size: 18px;
+      font-weight: 900;
+      font-family: roboto;
+      color: rgba(55, 70, 106, 0.4);
+      @media (max-width: $largeDesktop) {
+        font-size: 14px;
+      }
+      span {
+        color: rgb(25, 189, 241);
+        font-size: 26px;
+        border-bottom: 2px solid #19bdf1;
+        margin-right: 3px;
+        padding-bottom: 3px;
+        @media (max-width: $largeDesktop) {
+          font-size: 20px;
+        }
+      }
+    }
+    h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #37466a;
+      max-width: 180px;
+    }
+
+    .task-date {
+      margin-top: 10px;
+      .react-datepicker-wrapper {
+        margin-top: 10px;
+        input {
+          background: url("../images/mom-icons/CalendarBlue.png");
+          background-position: 95% 50%;
+          background-size: 15px;
+          background-repeat: no-repeat;
+          width: 122px;
+          height: 28px;
+          font-size: 14px;
+          @media (max-width: $largeDesktop) {
+            background-size: 10px;
+            width: 92px;
+            height: 26px;
+            font-size: 11px;
+            padding: 5px;
+          }
+        }
+        .react-datepicker__close-icon {
+          right: 27px;
+        }
+      }
+      span {
+        @media (max-width: $largeDesktop) {
+          font-size: 11px;
+          margin-left: 8px !important;
+          margin-right: 8px !important;
+        }
+      }
+    }
+  }
+  .pieChart-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #c8effb;
+    height: 100px;
+    width: 100px;
+    font-size: 20px;
+    border-radius: 100%;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $largeDesktop) {
+      height: 75px;
+      width: 75px;
+      font-size: 12px;
+    }
+    span {
+      color: #76984b;
+      font-size: 16px;
+    }
+  }
+  .chartContainer {
+    margin: 0 auto;
+    width: 150px !important;
+    height: 150px !important;
+    [id*="canvasjs-react-chart-container"] {
+      &::before {
+        content: "";
+        position: absolute;
+        background: #f3fcfe;
+        width: 48px;
+        top: 140px;
+        bottom: initial !important;
+        height: 7px;
+        left: 0;
+
+        z-index: 1;
+        @media (max-width: $largeDesktop) {
+          width: 36px;
+          top: 105px;
+        }
+      }
+    }
+    @media (max-width: $largeDesktop) {
+      width: 113px !important;
+      height: 113px !important;
+      margin-bottom: 30px;
+    }
+    .canvasjs-chart-credit {
+      display: none;
+    }
+  }
+  canvas {
+    &.canvasjs-chart-canvas {
+      width: 150px !important;
+      height: 150px !important;
+      @media (max-width: $largeDesktop) {
+        width: 113px !important;
+        height: 113px !important;
+      }
+    }
+  }
+}
+.totalTaskWrap {
+  background-color: #f3fcfe;
+  text-align: center;
+  padding: 25px;
+  border-radius: 5px;
+  padding-bottom: 0px;
+  ul {
+    padding: 0;
+    margin-bottom: 0;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      position: relative;
+      margin-left: 10px;
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(27, 35, 53, 0.05);
+      }
+      .square {
+        width: 15px;
+        height: 10px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        &.inProgress {
+          background-color: #4aabe0;
+        }
+        &.notStarted {
+          background-color: #ffc70b;
+        }
+        &.completed {
+          background-color: #85c13b;
+        }
+        &.overDue {
+          background-color: #d64032;
+        }
+      }
+      .status-count {
+        @media (min-width: 1700px) {
+          padding-right: 40px;
+        }
+        @media (max-width: $largeDesktop) {
+          font-size: 11px;
+        }
+      }
+      .total-taskStatus {
+        color: rgba(0, 0, 0, 0.8);
+        margin-left: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        @media (max-width: $largeDesktop) {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
+.select-task {
+  .task__control {
+    margin-top: -10px;
+  }
+}
+.task__control {
+  width: 115px;
+  min-height: 33px !important;
+  border-radius: 17px !important;
+  margin-top: -4px;
+  .task__value-container {
+    justify-content: center;
+    padding: 0;
+    @media (max-width: $largeDesktop) {
+      height: 27px;
+    }
+  }
+  @media (max-width: $largeDesktop) {
+    width: 88px;
+    margin-left: 5px;
+    min-height: 27px !important;
+    margin-top: 0;
+  }
+}
+.task__menu-list {
+  padding: 0 !important;
+  font-size: 14px;
+  font-weight: 500;
+  @media (max-width: $largeDesktop) {
+    font-size: 11px;
+  }
+}
+.task__indicator-separator {
+  display: none;
+}
+.task__indicator {
+  padding-left: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  @media (max-width: $largeDesktop) {
+    padding-right: 3px !important;
+  }
+  svg {
+    fill: rgb(55, 70, 106);
+    @media (max-width: $largeDesktop) {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+.task__single-value,
+.task__placeholder {
+  color: rgb(55, 70, 106) !important;
+  font-size: 14px;
+  font-weight: 600;
+  // right: 40px;
+  // left: 40%;
+  // transform: translate(-40%, -50%);
+  @media (max-width: $largeDesktop) {
+    font-size: 11px;
+  }
+}
+.no-meeting {
+  margin-top: 100px;
+  font-size: 20px;
+  text-align: center;
+}
+.task-applyBtnWrap {
+  text-align: left;
+  margin-top: 15px;
+  button {
+    padding: 2px 11px;
+    border: 0;
+    font-weight: 500;
+    margin: 3px;
+    background: #109cc8;
+    color: #fff;
+    border-radius: 3px;
+    &.clear-btn {
+      background: transparent;
+      color: #000;
+    }
+    @media (max-width: $largeDesktop) {
+      font-size: 11px;
+    }
+  }
+}
+
+.react-datepicker {
+  @media (max-width: $largeDesktop) {
+    font-size: 11px;
+  }
+  .react-datepicker__day-name,
+  .react-datepicker__day,
+  .react-datepicker__time-name {
+    margin: 1px;
+  }
+  .react-datepicker__time-container {
+    width: 70px;
+  }
+  ul {
+    &.react-datepicker__time-list {
+      li {
+        &.react-datepicker__time-list-item {
+          font-size: 11px;
+          padding: 0px;
+          width: 70px;
+        }
+      }
+    }
+  }
+}
+.assigneeUser {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(208, 234, 255);
+  border-radius: 100%;
+  text-align: center;
+  color: #000;
+  position: relative;
+  @media (max-width: $largeDesktop) {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,513 @@
+.modal-header {
+  border-bottom: none;
+  background-image: linear-gradient(to right, #19b5e8, #14ecee);
+}
+.subscription-plansModal {
+  max-width: 900px;
+  .timePeriod {
+    h2 {
+      font-size: 25px;
+      @media (max-width: $largeDesktop) {
+        font-size: 19px;
+      }
+    }
+    p {
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+      }
+    }
+  }
+  .timePeriodSelect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h4 {
+      font-size: 16px;
+      margin-bottom: 0;
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+      }
+    }
+    // .opc-8{
+    //   opacity:0.8;
+    // }
+  }
+  .plansHeader {
+    text-align: center;
+    padding-bottom: 55px;
+    padding-top: 20px;
+    background-image: url(../images/background.png);
+    position: relative;
+    height: 242px;
+    width: 100%;
+    background-position: top center;
+  }
+  .plansWrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .plansBox {
+    flex: 0 0 28%;
+    max-width: 28%;
+    margin: 0 12px;
+    box-shadow: 0 0 6px 3px rgba(58, 58, 58, 0.11);
+    border-radius: 6px;
+    // text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    top: -60px;
+    @media (max-width: $tablet) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-bottom: 20px;
+    }
+
+    h5 {
+      text-transform: uppercase;
+      font-size: 15px;
+      color: #37466a;
+      font-weight: 600;
+      @media (max-width: $largeDesktop) {
+        font-size: 11px;
+      }
+    }
+    ul {
+      padding-left: 0;
+      margin-bottom: 8px;
+    }
+    .plan-list {
+      padding-left: 28px;
+      font-size: 14px;
+      a {
+        font-weight: 800;
+        color: #19b5e8;
+      }
+    }
+    li {
+      @media (max-width: $largeDesktop) {
+        font-size: 11px;
+      }
+      &:before {
+        content: '';
+        background-image: url(../images/icons/tick-blue.png);
+        background-position: bottom;
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        background-repeat: no-repeat;
+        margin-left: -20px;
+        margin-top: -3px;
+      }
+    }
+    .buybtn-dis {
+      border: 2px solid rgb(42, 195, 236);
+      font-weight: bold;
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        90deg,
+        rgb(43, 190, 237),
+        rgb(34, 229, 231)
+      );
+      background-size: 100% 0px;
+      @media (max-width: $largeDesktop) {
+        font-size: 11px;
+      }
+      &:after {
+        content: '';
+        background-image: url(../images/icons/Arrow-Icon-black.svg);
+        background-position: bottom;
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        background-repeat: no-repeat;
+        margin-left: 25px;
+        margin-top: 3px;
+        @media (max-width: $largeDesktop) {
+          width: 10px;
+          height: 10px;
+          margin-top: 2px;
+        }
+      }
+      &:hover {
+        &:after {
+          background-image: url('../images/icons/Arrow-Icon.svg') !important;
+        }
+      }
+    }
+    .priceCat {
+      &:after {
+        content: '';
+        width: 22px;
+        height: 2px;
+        background: #2bbeed;
+        position: absolute;
+        left: 50%;
+        right: 0;
+        transform: translateX(-50%);
+      }
+    }
+    .planPrice {
+      margin-top: 20px;
+      margin-bottom: 16px;
+      min-height: 62px;
+      @media (max-width: $largeDesktop) {
+        font-size: 24px;
+      }
+      p {
+        font-size: 14px;
+        margin-top: 8px;
+      }
+      span {
+        font-size: 2.23rem;
+        vertical-align: top;
+      }
+      a {
+        color: #19b5e8;
+        font-size: 20px;
+        font-weight: 800;
+        text-decoration: underline;
+        cursor: pointer;
+        @media (max-width: $largeDesktop) {
+          font-size: 15px;
+        }
+        &:hover {
+          color: #007bff;
+        }
+      }
+    }
+    p {
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+  }
+  .license-text {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-family: 'roboto';
+    cursor: pointer;
+    color: #19b5e8;
+    &:hover {
+      color: #007bff;
+    }
+  }
+  .buyBtn {
+    margin-bottom: 20px;
+    padding: 0 55px;
+    height: 43px;
+    @media (max-width: $largeDesktop) {
+      padding: 0 43px;
+      height: 40px;
+    }
+    &:after {
+      margin-left: 20px;
+    }
+    &:hover {
+      background-image: linear-gradient(to right, #2bbeed, #22e5e7) !important;
+      box-shadow: 0px 0px 6px 3px #2bbeed91;
+      background-color: transparent;
+      background-size: unset;
+      color: #fff;
+    }
+    &:disabled {
+      &:hover {
+        background-image: none !important;
+        box-shadow: none !important;
+        color: rgba(#212529, 0.3) !important;
+      }
+    }
+  }
+  sub,
+  sup {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 10px;
+    margin: 0 20px;
+  }
+
+  .switch {
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider {
+    &:before {
+      position: absolute;
+      content: '';
+      height: 25px;
+      width: 25px;
+      left: 0px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      top: -5px;
+    }
+  }
+
+  input {
+    &:checked {
+      & + .slider {
+        background-color: rgb(165, 243, 255);
+      }
+    }
+  }
+
+  input {
+    &:focus {
+      & + .slider {
+        box-shadow: 0 0 1px #2196f3;
+      }
+    }
+  }
+
+  input {
+    &:checked {
+      & + .slider {
+        &:before {
+          -webkit-transform: translateX(34px);
+          -ms-transform: translateX(34);
+          transform: translateX(34px);
+        }
+      }
+    }
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round {
+    &:before {
+      border-radius: 50%;
+    }
+  }
+}
+
+.basic-plansModal {
+  max-width: 530px;
+
+  .text-blues {
+    color: rgb(55, 70, 106);
+  }
+
+  form {
+    label {
+      color: rgb(55, 70, 106);
+      font-weight: bold;
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+      }
+      @media (max-width: $phone) {
+        font-size: 12px;
+      }
+    }
+    .exp-fst {
+      width: 100%;
+      max-width: 100px;
+      &::placeholder {
+        text-align: center;
+      }
+    }
+    .exp-scd {
+      width: 100%;
+      max-width: 200px;
+    }
+    .exp-bef {
+      position: relative;
+    }
+    .bs-plan {
+      .bs-expiryCard {
+        display: flex;
+        align-items: center;
+        span {
+          font-size: 20px;
+
+          margin: 0 10px;
+        }
+      }
+      input {
+        &::placeholder {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+            'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+            'Noto Color Emoji' !important;
+        }
+      }
+    }
+    .bs-planw {
+      width: 100%;
+      max-width: 186px;
+      @media (max-width: $largeDesktop) {
+        max-width: 100px;
+      }
+    }
+  }
+}
+.paymentModal {
+  .quantityWrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .qWrap {
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      color: #6d6d6d;
+    }
+  }
+  .countCircle {
+    font-size: 35px;
+    font-weight: 100;
+    background: rgba(#ccc, 0.3);
+    color: #000;
+    width: 53px;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 100%;
+  }
+  .quantityCount {
+    margin: 5px;
+    width: 85px;
+    letter-spacing: 1px;
+    text-align: center;
+    border: 0;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'roboto';
+    &:focus,
+    &:hover,
+    &:active {
+      box-shadow: none;
+    }
+  }
+  .planContent {
+    padding: 30px;
+    text-align: center;
+  }
+  .planHeading {
+    background: #f8fcff;
+    p {
+      color: #37466a;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+  sub,
+  sup {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.planPrice {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  @media (max-width: $largeDesktop) {
+    font-size: 30px;
+  }
+}
+.checkout {
+  .StripeElement {
+    iframe {
+      height: 50px;
+    }
+  }
+}
+.card-number {
+  border-radius: 5px !important;
+  border: 1px solid rgba(126, 129, 137, 0.3) !important;
+  padding: 12px 15px !important;
+  @media (max-width: $largeDesktop) {
+    padding: 8px 15px !important;
+  }
+}
+.expiryDate {
+  border-radius: 5px !important;
+  border: 1px solid rgba(126, 129, 137, 0.3) !important;
+  padding: 12px 15px !important;
+  @media (max-width: $largeDesktop) {
+    padding: 8px 15px !important;
+  }
+}
+.nxtBtn {
+  margin-top: 38px;
+  margin-bottom: 25px;
+}
+sup,
+sub {
+  font-size: 16px;
+  font-weight: 600;
+}
+sup {
+  top: -1.5em;
+}
+.success-payment {
+  max-width: 380px;
+  img {
+    width: 100px;
+    @media (max-width: $largeDesktop) {
+      width: 80px;
+    }
+  }
+  h2 {
+    margin-top: 20px;
+    color: #48c5fc;
+    font-weight: 800;
+    font-size: 22px;
+    text-transform: capitalize;
+    @media (max-width: $largeDesktop) {
+      font-size: 17px;
+    }
+  }
+  .successText {
+    min-height: 175px;
+    font-size: 14px;
+    padding: 5px;
+    @media (max-width: $largeDesktop) {
+      font-size: 12px;
+      min-height: 100px;
+    }
+  }
+  .modal-body {
+    padding: 4rem 1.5rem;
+    @media (max-width: $largeDesktop) {
+      padding: 3rem 1.5rem;
+    }
+  }
+}

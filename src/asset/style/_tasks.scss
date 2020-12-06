@@ -1,0 +1,839 @@
+.taskStatusWrapper {
+  position: relative;
+  .no-task-found {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    @media (max-width: $largeDesktop) {
+      font-size: 12px;
+    }
+  }
+}
+.task-mgmtWrap {
+  h3 {
+    color: #37466a;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 5px;
+    @media (max-width: $largeDesktop) {
+      font-size: 15px;
+    }
+  }
+  .taskMgmt-list {
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      padding-right: 20px;
+      cursor: pointer;
+      @media (max-width: $largeDesktop) {
+        font-size: 12px;
+        margin-top: 5px;
+      }
+      img {
+        @media (max-width: $largeDesktop) {
+          width: 13px;
+        }
+      }
+    }
+    .archieve-dropdown {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .filter-dropdown {
+        .dropdown-toggle {
+          background: transparent;
+          color: #495057;
+          font-size: 12px;
+          border: 1px solid #ced4da;
+          min-width: 160px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          box-shadow: none;
+          height: 25px;
+          margin-right: 10px;
+        }
+
+        .dropdown-menu {
+          .dropdown-item {
+            font-size: 12px;
+            min-width: 125px;
+            padding: 8px 13px;
+          }
+        }
+      }
+    }
+    .archieved-action {
+      .task__control {
+        margin-top: 0;
+      }
+    }
+    .task-statusWrap {
+      display: flex;
+      overflow-x: auto;
+      overflow-y: hidden;
+      min-height: 220px;
+      align-items: baseline;
+      .statusBox {
+        flex: 1;
+        margin: 0.5em;
+        padding: 0.5em;
+        background: #f6f6f8;
+        border-radius: 3px;
+        min-width: 325px;
+        @media (max-width: $largeDesktop) {
+          min-width: 210px;
+          padding: 8px;
+          margin: 5px;
+        }
+        &.notStarted {
+          li {
+            border-left: 5px solid #ffc70b;
+            @media (max-width: $largeDesktop) {
+              border-left: 3px solid #ffc70b;
+            }
+          }
+        }
+        &.inProgress {
+          li {
+            border-left: 5px solid #4aabe0;
+            @media (max-width: $largeDesktop) {
+              border-left: 3px solid #4aabe0;
+            }
+          }
+        }
+        &.completed {
+          li {
+            border-left: 5px solid #85c13b;
+            @media (max-width: $largeDesktop) {
+              border-left: 3px solid #85c13b;
+            }
+          }
+        }
+        &.overDue {
+          li {
+            border-left: 5px solid #d64032;
+            @media (max-width: $largeDesktop) {
+              border-left: 3px solid #d64032;
+            }
+          }
+        }
+      }
+      .taskStatus-header {
+        font-weight: 600;
+        padding: 13px;
+        color: #454547;
+        font-size: 16px;
+        @media (max-width: $largeDesktop) {
+          font-size: 12px;
+          padding: 10px 10px 13px;
+        }
+        h4 {
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 0;
+          @media (max-width: $largeDesktop) {
+            font-size: 12px;
+            line-height: 24px;
+          }
+        }
+      }
+      .taskStatus-body {
+        ul {
+          &.taskContent {
+            li {
+              background: #ffffff;
+              color: #6d6d6d;
+              border-radius: 5px;
+              margin-bottom: 10px;
+              padding: 15px;
+              // padding-left: 25px;
+              position: relative;
+              cursor: pointer;
+              min-height: 145px;
+              h5 {
+                font-size: 16px;
+                font-weight: 600;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                @media (max-width: $largeDesktop) {
+                  font-size: 12px;
+                }
+              }
+              i {
+                font-size: 14px;
+              }
+              .user-img {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                img {
+                  width: 40px;
+                }
+              }
+              .task-content {
+                display: flex;
+                flex-direction: column;
+                margin-top: 18px;
+                font-weight: 500;
+                @media (max-width: $largeDesktop) {
+                  margin-top: 11px;
+                }
+                label {
+                  margin-right: 10px;
+                  margin-bottom: 0;
+                }
+                p {
+                  font-size: 14px;
+                  margin-bottom: 10px;
+                  @media (max-width: $largeDesktop) {
+                    font-size: 11px;
+                  }
+                  img {
+                    width: 20px;
+                    margin-right: 15px;
+                    @media (max-width: $largeDesktop) {
+                      width: 11px;
+                    }
+                  }
+                  &.dateName {
+                    font-family: "roboto";
+                    font-weight: 400;
+                  }
+                }
+              }
+              .remind-btn {
+                margin-top: 10px;
+                @media (max-width: $largeDesktop) {
+                  margin-top: 0;
+                }
+                button {
+                  color: #d3402e;
+                  border: 2px solid #d3402e;
+                  background: #fff;
+                  text-transform: uppercase;
+                  font-size: 14px;
+                  font-weight: 600;
+                  padding: 3px 20px;
+                  border-radius: 3px;
+                  @media (max-width: $largeDesktop) {
+                    font-size: 10px;
+                    padding: 0px 8px;
+                  }
+                }
+              }
+            }
+            .taskUser-circle {
+              height: 38px;
+              width: 38px;
+              background-color: rgb(208, 234, 255);
+
+              border-radius: 100%;
+              text-align: center;
+              color: #000;
+              position: relative;
+              z-index: 1;
+              margin: 5px;
+            }
+            .taskUser-circle {
+              @media (max-width: $largeDesktop) {
+                width: 32px;
+                height: 32px;
+                font-size: 11px;
+              }
+              img {
+                @media (max-width: $largeDesktop) {
+                  width: 32px !important;
+                  height: 32px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .taskMgmt-filter {
+      background: #f6f6f8;
+      padding: 30px 50px;
+      margin: 1.5em 0.5em;
+      border-radius: 3px;
+      transition: 5s;
+      display: none;
+      @media (max-width: $phone) {
+        padding: 30px;
+      }
+      @media (max-width: $smallPhone) {
+        padding: 15px;
+      }
+      &.open {
+        display: block;
+        transition: 5s;
+      }
+      .filterWrap {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 25px;
+        .filterLabels {
+          h4 {
+            width: 200px;
+            @media (max-width: $largeDesktop) {
+              width: 150px;
+            }
+            @media (max-width: $phone) {
+              width: 125px;
+            }
+            @media (max-width: $smallPhone) {
+              width: 105px;
+              font-size: 14px;
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .form-check {
+      width: 200px;
+      @media (max-width: $largeDesktop) {
+        width: 150px;
+      }
+      @media (max-width: $smallPhone) {
+        width: 100%;
+      }
+    }
+    .react-datepicker__input-container {
+      input {
+        background: url(../images/icons/calendar.png);
+        background-position: 95% 60%;
+        background-repeat: no-repeat;
+        background-size: 24px;
+        @media (max-width: $largeDesktop) {
+          font-size: 12px;
+          background-size: 13px;
+        }
+      }
+    }
+    .react-datepicker__close-icon::after {
+      cursor: pointer;
+      background-color: #f6f6f8;
+      color: #000;
+      border-radius: 50%;
+      height: 31px;
+      width: 31px;
+      padding: 2px;
+      font-size: 18px;
+      line-height: 1;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      content: "\00d7";
+      @media (max-width: $largeDesktop) {
+        height: 25px;
+        width: 25px;
+      }
+    }
+    .filterOptions {
+      margin-left: 10px;
+      @media (max-width: $largeDesktop) {
+        margin-left: 4px;
+      }
+      label {
+        &.checkbox-icon {
+          position: relative;
+          font-weight: 500;
+          opacity: 0.5;
+          @media (max-width: $largeDesktop) {
+            font-size: 12px;
+          }
+          @media (max-width: $smallPhone) {
+            font-size: 13px;
+          }
+          &:before {
+            content: "";
+            background-image: url("../images/icons/checkbox.png");
+            background-size: cover;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            right: 100%;
+            margin-right: 10px;
+            top: 2px;
+            @media (max-width: $largeDesktop) {
+              width: 12px;
+              height: 12px;
+            }
+          }
+        }
+      }
+      input {
+        &:checked {
+          & + label {
+            opacity: 1;
+            &.checkbox-icon {
+              &:before {
+                content: "";
+                background-image: url("../images/mom-icons/Checked.png");
+                background-size: 37px;
+                background-position: center;
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                right: 100%;
+                margin-right: 10px;
+                top: 2px;
+                @media (max-width: $largeDesktop) {
+                  width: 12px;
+                  height: 12px;
+                  background-size: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .form-check-input {
+        display: none;
+      }
+    }
+    .filterSubmittedBtn {
+      text-align: right;
+      button {
+        margin: 5px;
+        background: #109cc8;
+        padding: 3px 14px;
+        font-weight: 500;
+        @media (max-width: $largeDesktop) {
+          font-size: 11px;
+        }
+
+        &.clearBtn {
+          background: transparent;
+          color: #000;
+        }
+        &:focus,
+        &:active,
+        &:hover {
+          box-shadow: none !important;
+        }
+      }
+    }
+  }
+  .total-taskMgmt {
+    .canvasjs-chart-credit {
+      display: none;
+    }
+    .canvasjs-chart-tooltip {
+      z-index: 1 !important;
+    }
+    .chartContainer {
+      height: 400px;
+      .circle {
+        @media (max-width: $largeDesktop) {
+          width: 120px;
+          height: 120px;
+          font-size: 14px;
+        }
+      }
+    }
+    .canvasjs-chart-canvas {
+      @media (max-width: $largeDesktop) {
+        transform: scale(0.65);
+      }
+    }
+  }
+}
+.sidebarCardWrap {
+  .task-sidebarCard {
+    position: fixed;
+    background: #fff;
+    z-index:1000;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    right: -50%;
+    transition: 0.5s;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @media (max-width: $desktop) {
+      width: 80%;
+      right: -80%;
+    }
+    @media (max-width: $phone) {
+      width: 90%;
+      right: -90%;
+    }
+  }
+  &.opening {
+    .task-sidebarCard {
+      right: 0;
+      .cross {
+        padding: 30px;
+        cursor: pointer;
+        position: fixed;
+        @media (max-width: $largeDesktop) {
+          padding: 15px 20px;
+        }
+        @media (max-width: $phone) {
+          padding: 20px;
+        }
+      }
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      @media (max-width: $largeDesktop) {
+        font-size: 13px;
+      }
+    }
+    .taskCard-content {
+      padding: 60px;
+      @media (max-width: $largeDesktop) {
+        padding: 40px;
+      }
+      @media (max-width: $phone) {
+        padding: 50px 40px;
+      }
+      .nameContent {
+        display: flex;
+        margin-bottom: 20px;
+        @media (max-width: $phone) {
+          flex-direction: column;
+          margin-bottom: 0;
+        }
+        h3 {
+          flex: 0 0 47%;
+          max-width: 47%;
+          margin-right: 30px;
+          word-break: break-word;
+          @media (max-width: $phone) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 5px;
+            font-size: 16px;
+          }
+          span {
+            font-weight: 500;
+          }
+        }
+      }
+
+      h2 {
+        color: #37466a;
+        margin-bottom: 0;
+        @media (max-width: $tablet) {
+          font-size: 20px;
+        }
+        @media (max-width: $phone) {
+          font-size: 16px;
+        }
+      }
+      .tasksHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        .user-edit {
+          padding: 0;
+          button {
+            padding: 0;
+          }
+        }
+        h2 {
+          word-break: break-all;
+        }
+      }
+      .document-upload {
+        li {
+          margin-right: 15px;
+        }
+        label {
+          width: 95px;
+          height: 95px;
+          max-height: 95px;
+          @media (max-width: $largeDesktop) {
+            width: 80px;
+            height: 80px;
+          }
+          img {
+            width: 30px;
+          }
+        }
+        svg {
+          fill: #6d6d6d;
+        }
+      }
+
+      .commentUserImg {
+        height: 40px;
+        width: 40px;
+        background-color: #37466a;
+        border-radius: 100%;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        margin-right: 15px;
+        @media (max-width: $largeDesktop) {
+          font-size: 11px;
+        }
+        @media (max-width: $phone) {
+          margin: 0 auto;
+        }
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .commentWrap {
+        display: flex;
+        margin-bottom: 1rem;
+        @media (max-width: $largeDesktop) {
+          margin-bottom: 0;
+        }
+        @media (max-width: $phone) {
+          flex-direction: column;
+        }
+        &.logo {
+          .commentUserImg {
+            background: none;
+          }
+        }
+      }
+      .commentWrapper {
+        overflow: auto;
+        max-height: 200px;
+      }
+      .commentWrap-input {
+        margin-top: 1.5rem;
+      }
+      .commentContent {
+        width: 100%;
+        @media (max-width: $phone) {
+          width: 100%;
+          margin-top: 15px;
+        }
+        p {
+          background: #f6f6f8;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-size: 14px;
+          margin-bottom: 0;
+          @media (max-width: $largeDesktop) {
+            font-size: 11px;
+          }
+        }
+        input {
+          background: #f6f6f8;
+          font-size: 14px;
+          height: 50px;
+          @media (max-width: $largeDesktop) {
+            height: 38px;
+            font-size: 12px;
+          }
+        }
+      }
+
+      .dateWrapper {
+        .row {
+          margin-left: -8px;
+          margin-right: -8px;
+          > div {
+            padding-left: 8px;
+            padding-right: 8px;
+          }
+        }
+        label {
+          font-size: 18px;
+          font-weight: 600;
+          color: #37466a;
+          @media (max-width: $largeDesktop) {
+            font-size: 12px;
+          }
+        }
+        input {
+          &.form-control {
+            font-family: "roboto";
+            @media (max-width: $largeDesktop) {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .react-datepicker-wrapper {
+          input {
+            background: url("../images/mom-icons/CalendarBlue.png");
+            background-position: 95% 50%;
+            background-repeat: no-repeat;
+            width: 180px;
+          }
+        }
+        .department__control {
+          width: 180px;
+          background: #acd174;
+          font-size: 14px;
+          font-weight: 500;
+          .department__indicator-separator {
+            display: none;
+          }
+          .department__indicator {
+            color: #6d6d6d;
+          }
+        }
+      }
+      .task-btn {
+        margin-top: 40px;
+        margin-left: 6px;
+        text-align: center;
+        button {
+          width: 170px;
+          height: 47px;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 16px;
+          background: linear-gradient(to right, #2bbeed, #22e5e7);
+          border: 0;
+          box-shadow: none;
+
+          @media (max-width: $largeDesktop) {
+            width: 122px;
+            height: 38px;
+            font-size: 11px;
+          }
+        }
+      }
+    }
+
+    .sidebar-overlay {
+      position: fixed;
+      background: #000;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: 999;
+      min-height: 100vh;
+      opacity: 0.6;
+    }
+  }
+}
+.status__indicator-separator {
+  display: none;
+}
+.status__indicators {
+  .status__dropdown-indicator {
+    color: #fff;
+  }
+}
+.status__menu {
+  font-size: 15px;
+  font-weight: 500;
+  @media (max-width: $largeDesktop) {
+    font-size: 11px;
+  }
+}
+.status__control {
+  @media (max-width: $largeDesktop) {
+    font-size: 11px;
+    min-height: 32px !important;
+  }
+  .status__indicator {
+    padding: 5px;
+  }
+}
+
+.notStarted {
+  .status__control {
+    background: #4aabe0;
+    border: 0;
+  }
+  .status__single-value {
+    color: #fff;
+    font-weight: 500;
+  }
+}
+.inProgress {
+  .status__control {
+    background: #ffc70b;
+  }
+  .status__single-value {
+    color: #fff;
+    font-weight: 500;
+  }
+}
+.completed {
+  .status__control {
+    background: #85c13b;
+  }
+  .status__single-value {
+    color: #fff;
+    font-weight: 500;
+  }
+}
+.overDue {
+  .status__control {
+    background: #d64032;
+  }
+  .status__single-value {
+    color: #fff;
+    font-weight: 500;
+  }
+}
+.chartContainer {
+  text-align: center;
+  position: relative;
+  [id*="canvasjs-react-chart-container"] {
+    &::before {
+      content: "";
+      position: absolute;
+      background: white;
+      width: 75px;
+      height: 20px;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      @media (max-width: $largeDesktop) {
+        left: 17%;
+        bottom: 17%;
+      }
+    }
+  }
+  .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff743b;
+    height: 180px;
+    width: 180px;
+    font-size: 20px;
+    border-radius: 100%;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .taskcircle {
+    position: absolute;
+    top: 51%;
+    left: 14%;
+    transform: translate(-50%, -50%);
+    background-color: #c8effb;
+    height: 140px;
+    width: 140px;
+    font-size: 20px;
+    border-radius: 100%;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+canvas {
+  margin: 0 auto;
+}
